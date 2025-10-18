@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "derderClientEditor Editor Win64 Development (derderClient)",
+            "compilerPath": "E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "msvc-x64",
+            "compileCommands": [
+                "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_derderClient.json"
+            ]
+        },
+        {
+            "name": "Win32",
+            "compilerPath": "E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "msvc-x64",
+            "compileCommands": [
+                "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default.json"
+            ]
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "sNdLd3/V7uc=",
+  "success": true,
+  "projectFilePath": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaDefaultParamCollectorUbtPlugin\\UnLuaDefaultParamCollectorUbtPlugin.ubtplugin.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

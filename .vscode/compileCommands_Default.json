@@ -1,0 +1,2018 @@
+[
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaProtobuf\\Source\\LuaProtobuf.Build.cs",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.24.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaProtobuf\\Source\\Private\\LuaProtobufModule.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.24.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaProtobuf\\Source\\Public\\LuaProtobufModule.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.24.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaProtobuf\\Source\\src\\pb.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.24.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaProtobuf\\Source\\src\\pb.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.24.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\LuaRapidjson.Build.cs",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\Private\\LuaRapidjsonModule.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\Public\\LuaRapidjsonModule.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\allocators.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\cursorstreamwrapper.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\document.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\encodedstream.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\encodings.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\error\\en.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\error\\error.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\filereadstream.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\filewritestream.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\fwd.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\internal\\biginteger.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\internal\\clzll.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\internal\\diyfp.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\internal\\dtoa.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\internal\\ieee754.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\internal\\itoa.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\internal\\meta.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\internal\\pow10.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\internal\\regex.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\internal\\stack.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\internal\\strfunc.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\internal\\strtod.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\internal\\swap.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\istreamwrapper.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\memorybuffer.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\memorystream.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\msinttypes\\inttypes.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\msinttypes\\stdint.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\ostreamwrapper.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\pointer.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\prettywriter.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\rapidjson.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\reader.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\schema.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\stream.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\stringbuffer.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\include\\rapidjson\\writer.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\src\\Document.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\src\\Schema.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\src\\StringStream.hpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\src\\Userdata.hpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\src\\file.hpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\src\\luax.hpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\src\\rapidjson.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\src\\values.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaRapidjson\\Source\\src\\values.hpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.27.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\LuaSocket.Build.cs",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\Private\\LuaSocketModule.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\Public\\LuaSocketModule.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\auxiliar.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\auxiliar.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\buffer.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\buffer.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\compat.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\compat.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\except.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\except.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\inet.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\inet.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\io.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\io.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\luasocket.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\luasocket.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\mime.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\mime.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\options.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\options.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\pierror.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\select.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\select.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\serial.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\socket.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\tcp.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\tcp.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\timeout.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\timeout.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\udp.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\udp.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\unix.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\unix.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\unixdgram.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\unixdgram.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\unixstream.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\unixstream.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\usocket.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\usocket.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\wsocket.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLuaExtensions\\LuaSocket\\Source\\src\\wsocket.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\Source.28.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\Commandlets\\UnLuaIntelliSenseCommandlet.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\Compat\\UObjectHash.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\Compat\\UObjectHash.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\Toolbars\\AnimationBlueprintToolbar.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\Toolbars\\AnimationBlueprintToolbar.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\Toolbars\\BlueprintToolbar.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\Toolbars\\BlueprintToolbar.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\Toolbars\\MainMenuToolbar.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\Toolbars\\MainMenuToolbar.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\Toolbars\\UnLuaEditorToolbar.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\Toolbars\\UnLuaEditorToolbar.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\UnLuaAboutScreen.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\UnLuaAboutScreen.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\UnLuaEditorCommands.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\UnLuaEditorCommands.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\UnLuaEditorCore.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\UnLuaEditorCore.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\UnLuaEditorFunctionLibrary.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\UnLuaEditorFunctionLibrary.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\UnLuaEditorModule.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\UnLuaEditorSettings.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\UnLuaEditorSettings.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\UnLuaEditorStyle.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\UnLuaEditorStyle.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\UnLuaIntelliSense.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Private\\UnLuaIntelliSenseGenerator.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Public\\Commandlets\\UnLuaIntelliSenseCommandlet.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Public\\UnLuaIntelliSense.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\Public\\UnLuaIntelliSenseGenerator.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLuaEditor\\UnLuaEditor.Build.cs",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLuaEditor.26.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\BaseLib\\LuaLib_Array.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\BaseLib\\LuaLib_Class.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\BaseLib\\LuaLib_DataTable.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\BaseLib\\LuaLib_Delegate.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\BaseLib\\LuaLib_Enum.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\BaseLib\\LuaLib_Enum.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\BaseLib\\LuaLib_File.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\BaseLib\\LuaLib_Key.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\BaseLib\\LuaLib_Map.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\BaseLib\\LuaLib_MulticastDelegate.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\BaseLib\\LuaLib_Object.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\BaseLib\\LuaLib_PrimitiveTypes.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\BaseLib\\LuaLib_Set.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\BaseLib\\LuaLib_Text.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\BaseLib\\LuaLib_World.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Binding.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\CollisionHelper.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\CollisionHelper.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Containers\\LuaArray.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Containers\\LuaContainerInterface.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Containers\\LuaMap.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Containers\\LuaSet.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\DefaultParamCollection.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\DefaultParamCollection.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\LuaCore.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\LuaCore.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\LuaDanglingCheck.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\LuaDanglingCheck.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\LuaDeadLoopCheck.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\LuaDeadLoopCheck.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\LuaDelegateHandler.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\LuaDynamicBinding.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\LuaDynamicBinding.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\LuaEnv.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\LuaEnvLocator.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\LuaFunction.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\LuaModuleLocator.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\LuaOverrides.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\LuaOverrides.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\LuaOverridesClass.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\LuaValue.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\MathLib\\LuaLib_FColor.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\MathLib\\LuaLib_FIntPoint.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\MathLib\\LuaLib_FIntVector.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\MathLib\\LuaLib_FLinearColor.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\MathLib\\LuaLib_FQuat.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\MathLib\\LuaLib_FRotator.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\MathLib\\LuaLib_FTransform.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\MathLib\\LuaLib_FVector.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\MathLib\\LuaLib_FVector2.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\MathLib\\LuaLib_FVector4.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\MathLib\\LuaLib_Math.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\ObjectReferencer.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\ReflectionUtils\\ClassDesc.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\ReflectionUtils\\ClassDesc.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\ReflectionUtils\\EnumDesc.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\ReflectionUtils\\EnumDesc.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\ReflectionUtils\\FieldDesc.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\ReflectionUtils\\FunctionDesc.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\ReflectionUtils\\FunctionDesc.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\ReflectionUtils\\ParamBufferAllocator.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\ReflectionUtils\\ParamBufferAllocator.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\ReflectionUtils\\PropertyDesc.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\ReflectionUtils\\PropertyDesc.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Registries\\ClassRegistry.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Registries\\ClassRegistry.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Registries\\ContainerRegistry.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Registries\\ContainerRegistry.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Registries\\DelegateRegistry.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Registries\\DelegateRegistry.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Registries\\EnumRegistry.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Registries\\EnumRegistry.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Registries\\FunctionRegistry.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Registries\\FunctionRegistry.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Registries\\ObjectRegistry.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Registries\\ObjectRegistry.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Registries\\PropertyRegistry.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\Registries\\PropertyRegistry.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\UELib.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\UELib.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\UnLuaBase.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\UnLuaCompatibility.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\UnLuaConsoleCommands.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\UnLuaConsoleCommands.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\UnLuaDebugBase.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\UnLuaDelegates.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\UnLuaFunctionLibrary.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\UnLuaLatentAction.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\UnLuaLegacy.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\UnLuaLib.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\UnLuaLib.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\UnLuaManager.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\UnLuaModule.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\UnLuaPrivate.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Private\\UnLuaSettings.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\Binding.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\LowLevel.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\LowLevel.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\LuaDelegateHandler.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\LuaEnv.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\LuaEnvLocator.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\LuaFunction.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\LuaModuleLocator.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\LuaOverridesClass.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\LuaValue.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\UnLua.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\UnLuaBase.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\UnLuaDebugBase.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\UnLuaDelegates.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\UnLuaEx.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\UnLuaEx.inl",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\UnLuaFunctionLibrary.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\UnLuaInterface.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\UnLuaLatentAction.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\UnLuaLegacy.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\UnLuaManager.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\UnLuaModule.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\UnLuaSettings.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\UnLuaTemplate.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\Public\\lua.hpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Plugins\\UnLua\\Source\\UnLua\\UnLua.Build.cs",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\UnLua.25.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Source\\derderClient\\MyHUD.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\derderClient.1.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Source\\derderClient\\MyHUD.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\derderClient.1.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Source\\derderClient\\derderClient.Build.cs",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\derderClient.1.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Source\\derderClient\\derderClient.cpp",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\derderClient.1.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\Source\\derderClient\\derderClient.h",
+		"arguments": [
+			"E:\\IDE\\VS\\VSIDE\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe",
+			"@G:\\2MyGameDev\\UE\\frameworks\\derderFramework\\UEDerderFrameworkClient\\.vscode\\compileCommands_Default\\derderClient.1.rsp"
+		],
+		"directory": "E:\\GameEngines\\UE\\UE_5.3\\Engine\\Source"
+	}
+]
