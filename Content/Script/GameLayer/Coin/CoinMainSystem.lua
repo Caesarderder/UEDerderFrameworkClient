@@ -3,20 +3,17 @@ local SystemBase = require("Core.GameLayerBase.SystemBase")
 local BM_Coin = require("DataLayer.Coin.BM_Coin")
 local GameContext = require("Core.GameContext")
 
----@class CoinMainSystem
----@type CoinMainSystem
-local CoinMainSystem ={
-    ---@type BM_Coin
-    bm_Coin = BM_Coin:new()
-} 
-
-setmetatable(CoinMainSystem, {__index = SystemBase})
+---@class CoinMainSystem : SystemBase
+local CoinMainSystem = setmetatable({}, {__index = SystemBase})
 
 ---初始化系统
 function CoinMainSystem:init()
-    -- self.bm_Coin.AddCoin
-    -- self.bm_Coin.dataModule.Fields
-    self.bm_Coin.AddCoin(100)
+    -- 先初始化DataModule的数据
+    BM_Coin.dataModule:init()
+    -- 再初始化BusinessModule的属性访问器
+    BM_Coin:initializeProperties()
+    
+    BM_Coin:AddCoin(100)
     print("[CoinMainSystem] 金币主系统初始化完成")
 end
 
@@ -49,13 +46,13 @@ end
 ---@param callback fun(newValue: number, oldValue: number) 回调函数
 ---@return function 回调函数，用于后续移除
 function CoinMainSystem:registerCoinChangeCallback(callback)
-    return BM_Coin.CoinNum.addOnChange(callback)
+    return BM_Coin.CoinNum.AddListener(callback)
 end
 
 ---取消金币变化监听
 ---@param callback fun(newValue: number, oldValue: number) 回调函数
 function CoinMainSystem:unregisterCoinChangeCallback(callback)
-    BM_Coin.CoinNum.removeOnChange(callback)
+    BM_Coin.CoinNum.RemoveListener(callback)
 end
 
 ---保存游戏数据

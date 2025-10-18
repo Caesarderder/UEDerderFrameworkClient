@@ -1,22 +1,23 @@
----@class CoinManager
+---@class CoinManager : ManagerBase
 ---金币管理器
 local ManagerBase = require("Core.GameLayerBase.ManagerBase")
 local CoinMainSystem = require("GameLayer.Coin.CoinMainSystem")
 local consts = require("Util.Consts")
 
 ---@type CoinManager
-local CoinManager = setmetatable({
-    ---@type CoinMainSystem
-    coinMainSystem = CoinMainSystem:new()
-
-}, {__index = ManagerBase})
+local CoinManager = setmetatable({}, {__index = ManagerBase})
 
 ---初始化
 function CoinManager:init()
     -- 调用父类init，初始化systems表
     ManagerBase.init(self)
+    
+    -- 创建并初始化主系统
+    local coinMainSystem = CoinMainSystem:new()
+    coinMainSystem:init()
+    
     -- 注册主系统
-    self:registerSystem(consts.SystemType.COIN_MAIN, self.coinMainSystem)
+    self:registerSystem(consts.SystemType.COIN_MAIN, coinMainSystem)
 end
 
 --[[

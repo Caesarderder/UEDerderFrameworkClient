@@ -12,8 +12,8 @@ local _uiInstances = {}      -- UI实例管理表
 ---初始化
 function uiLayerSystem:init()
     -- 直接初始化系统
-    if gameContext.worldContext then
-        self:initializeSystem(gameContext.worldContext)
+    if gameContext.gameInstance then
+        self:initializeSystem(gameContext.gameInstance)
     end
     print("[UILayerSystem] 初始化完成")
 end
@@ -37,7 +37,7 @@ end
 ---@return userdata UI实例
 function uiLayerSystem:openUI(uiName, layer, params)
     -- 检查系统是否已初始化
-    if not gameContext.worldContext then
+    if not gameContext.gameInstance then
         print("[UILayerSystem] Error: UI层级系统未初始化，请确保GameContext已正确设置worldContext")
         return nil
     end
@@ -61,7 +61,7 @@ function uiLayerSystem:openUI(uiName, layer, params)
     end
     
     -- 获取World（对应C++的GetWorld()）
-    local world = gameContext.worldContext
+    local world = gameContext.gameInstance
     if not world then
         print("[UILayerSystem] Error: 无法获取WorldContext")
         return nil

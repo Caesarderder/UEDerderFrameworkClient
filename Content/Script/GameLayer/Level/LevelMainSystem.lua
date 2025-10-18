@@ -14,7 +14,7 @@ end
 ---切换关卡
 ---@param levelName string 关卡名称
 function LevelMainSystem:switchLevel(levelName)
-    worldContext=GameContext.worldContext
+    worldContext=GameContext.gameInstance
     
     if not levelName or levelName == "" then
         print("[LevelMainSystem] 错误: 无效的关卡名称")

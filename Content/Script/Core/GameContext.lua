@@ -5,7 +5,9 @@ local Consts = require("Util.Consts")
 
 local GameContext = {
     _isInitialized = false,
-    worldContext = nil,  -- 公开的worldContext属性
+    gameInstance = nil,  -- 公开的worldContext属性
+    gameMode = nil,      -- 公开的GameMode属性
+    playerController= nil,  -- 公开的PlayerController属性
     systems = {},
     managers = {},
     eventCenter = nil,
@@ -21,12 +23,17 @@ function GameContext:initialize(worldContext)
     end
 
     -- 保存WorldContext供后续使用
-    self.worldContext = worldContext
+    self.gameInstance = worldContext
     self.eventCenter = EventBus:new()
 
     self:startUpManagers()
     self._isInitialized = true
     print("[GameContext] 初始化完成")
+end
+
+function GameContext:SetGameMode(gameMode)
+    self.gameMode=gameMode
+    self.playerController=UE.UGameplayStatics.GetPlayerController(self.gameInstance, 0)
 end
 
 ---销毁GameContext
@@ -49,6 +56,7 @@ function GameContext:registerManagers()
     self.managers[Consts.ManagerType.UI] = require("GameLayer.UI.UIManager")
     self.managers[Consts.ManagerType.COIN] = require("GameLayer.Coin.CoinManager")
     self.managers[Consts.ManagerType.LEVEL] = require("GameLayer.Level.LevelManager")
+    self.managers[Consts.ManagerType.LLM] = require("GameLayer.Llm.LlmManager")
 end
 
 ---初始化Manager
@@ -57,6 +65,10 @@ function GameContext:initManagers()
     for _, manager in pairs(self.managers) do
         manager:init()
     end
+end
+
+function GameContext:getPlayerController()
+    return self.playerController
 end
 
 ---获取系统
@@ -108,6 +120,12 @@ end
 ---@return table 事件中心实例
 function GameContext:GetEventCenter()
     return self.eventCenter
+end
+
+---获取LLM管理器
+---@return table LLM管理器实例
+function GameContext:GetLlmManager()
+    return self.managers[Consts.ManagerType.LLM]
 end
 
 return GameContext

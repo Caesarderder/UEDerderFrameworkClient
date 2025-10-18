@@ -13,7 +13,7 @@ setmetatable(BM_Coin, { __index = BusinessModule })
 
 function BM_Coin:AddCoin(number)
     if number > 0 then
-        self.dataModule.CoinNum = self.dataModule.CoinNum + number
+        self.dataModule.coinNum = self.dataModule.coinNum + number
     end
 end
 
