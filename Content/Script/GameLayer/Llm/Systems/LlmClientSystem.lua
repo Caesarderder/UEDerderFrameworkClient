@@ -88,7 +88,8 @@ end
 ---@param config table|nil 配置参数
 ---@param onDelta function 增量回调 function(delta: string)
 ---@param onComplete function 完成回调 function(success: boolean, fullText: string)
-function LlmClientSystem:SendStreamChatRequest(messages, tools, config, onDelta, onComplete)
+---@param onToolCall function|nil 工具调用回调 function(toolCalls: table)
+function LlmClientSystem:SendStreamChatRequest(messages, tools, config, onDelta, onComplete, onToolCall)
     -- 验证配置
     local isValid, errorMsg = BM_LlmConfig:ValidateConfig()
     if not isValid then
@@ -140,17 +141,27 @@ function LlmClientSystem:SendStreamChatRequest(messages, tools, config, onDelta,
         bodyJson,
         function(chunk)
             -- 处理流式chunk
-            self.streamSystem:ParseStream(chunk, provider, function(delta)
-                fullText = fullText .. delta
-                if onDelta then
-                    onDelta(delta)
+            self.streamSystem:ParseStream(chunk, provider, 
+                function(delta)
+                    -- 文本增量回调
+                    fullText = fullText .. delta
+                    if onDelta then
+                        onDelta(delta)
+                    end
+                end, 
+                function()
+                    -- 流式完成回调
+                    if onComplete then
+                        onComplete(true, fullText)
+                    end
+                end,
+                function(toolCalls)
+                    -- 工具调用回调
+                    if onToolCall then
+                        onToolCall(toolCalls)
+                    end
                 end
-            end, function()
-                -- 流式完成
-                if onComplete then
-                    onComplete(true, fullText)
-                end
-            end)
+            )
         end,
         function(success, fullResponse, code)
             -- HTTP请求完成
@@ -172,4 +183,5 @@ function LlmClientSystem:Tick(deltaTime)
 end
 
 return LlmClientSystem
+
 

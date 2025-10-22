@@ -44,7 +44,7 @@ end
 
 ---构建完整的Prompt
 ---@param chatType string ChatType名称
----@param params table 参数表
+---@param params table 参数表 {typeArgs: table, normalArgs: table}
 ---@return string|nil 构建后的Prompt
 function BM_LlmPrompt:BuildPrompt(chatType, params)
     local template = self:GetTemplate(chatType)
@@ -54,7 +54,72 @@ function BM_LlmPrompt:BuildPrompt(chatType, params)
     end
     
     local systemPrompt = template.systemPrompt or ""
-    return self:ReplaceVariables(systemPrompt, params)
+    
+    -- 1. 使用 typeArgs 替换模板变量
+    local typeArgs = params.typeArgs or {}
+    systemPrompt = self:ReplaceVariables(systemPrompt, typeArgs)
+    
+    -- 2. 使用 normalArgs 添加通用提示
+    local normalArgs = params.normalArgs or {}
+    if next(normalArgs) ~= nil then
+        local additionalPrompts = self:BuildNormalArgsPrompt(normalArgs)
+        if additionalPrompts ~= "" then
+            systemPrompt = systemPrompt .. "\n\n" .. additionalPrompts
+        end
+    end
+    
+    return systemPrompt
+end
+
+---构建通用参数的提示文本（支持 OtherOptions）
+---@param normalArgs table 通用参数（OtherOptions）
+---@return string 提示文本
+function BM_LlmPrompt:BuildNormalArgsPrompt(normalArgs)
+    local parts = {}
+    
+    -- 【新架构】处理 includePrompts
+    local includePrompts = normalArgs.includePrompts or {}
+    local customPrompts = normalArgs.customPrompts or {}
+    
+    for _, promptType in ipairs(includePrompts) do
+        if promptType == "enemy_context" and customPrompts.enemy_context then
+            table.insert(parts, "## 🎭 仇人对话上下文")
+            table.insert(parts, customPrompts.enemy_context)
+        elseif promptType == "loop_context" and customPrompts.loop_context then
+            table.insert(parts, "## 🔄 时间循环上下文")
+            table.insert(parts, customPrompts.loop_context)
+        elseif promptType == "unlock_conditions" then
+            -- 解锁条件（兼容旧架构）
+            local conditions = normalArgs.unlockConditions or customPrompts.unlock_conditions
+            if conditions then
+                table.insert(parts, "## 🎯 当前解锁条件")
+                table.insert(parts, conditions)
+            end
+        end
+    end
+    
+    -- 【兼容旧架构】直接提供的参数
+    if not next(includePrompts) then
+        -- 解锁条件
+        if normalArgs.unlockConditions then
+            table.insert(parts, "## 🎯 当前解锁条件")
+            table.insert(parts, normalArgs.unlockConditions)
+        end
+        
+        -- 特殊指示
+        if normalArgs.specialInstructions then
+            table.insert(parts, "## 📌 特殊指示")
+            table.insert(parts, normalArgs.specialInstructions)
+        end
+        
+        -- 上下文信息
+        if normalArgs.contextInfo then
+            table.insert(parts, "## 📖 当前上下文")
+            table.insert(parts, normalArgs.contextInfo)
+        end
+    end
+    
+    return table.concat(parts, "\n")
 end
 
 ---获取模板的工具列表
@@ -85,4 +150,5 @@ function BM_LlmPrompt:GetTemplateConfig(chatType)
 end
 
 return BM_LlmPrompt
+
 

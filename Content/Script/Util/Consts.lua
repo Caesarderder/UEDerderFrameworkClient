@@ -39,6 +39,7 @@ local Consts = {
         NPC_INTERACTION = "npc_interaction",
         ITEM_DESCRIPTION = "item_description",
         GENERAL_CHAT = "general_chat",
+        SCENE_CHOICE = "scene_choice",  -- 新增：场景抉择后的叙事和判定
     },
 }
 

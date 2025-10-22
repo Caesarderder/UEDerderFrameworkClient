@@ -66,13 +66,34 @@ end
     核心Chat接口 - 简化的业务调用
 --]]
 
----发送Chat请求（统一接口）
+---发送Chat请求（新架构统一接口）
 ---@param chatType string ChatType类型
----@param params table 参数表
+---@param typeOptions table TypeOptions - 专属参数，用于组成提示词
+---   - 对于 CHARACTER_DIALOGUE: 包含 npcId, sceneId, 以及角色的其他属性
+---@param otherOptions table OtherOptions - 额外参数
+---   - userInput: string 用户输入（必需）
+---   - includePrompts: table 需要加入的额外提示词类型列表
+---   - customPrompts: table 自定义提示词内容
 ---@param onStream function|nil 流式回调 function(delta: string)
 ---@param onComplete function|nil 完成回调 function(success: boolean, result: string)
-function LlmManager:Chat(chatType, params, onStream, onComplete)
+function LlmManager:Chat(chatType, typeOptions, otherOptions, onStream, onComplete)
     local reactSystem = self.systems[Consts.SystemType.LLM_REACT]
+    local contextSystem = self.systems[Consts.SystemType.LLM_CONTEXT]
+    
+    -- 【新架构】预处理 TypeOptions
+    typeOptions = typeOptions or {}
+    otherOptions = otherOptions or {}
+    
+    -- === CharacterChat 特殊处理 ===
+    if chatType == Consts.ChatType.CHARACTER_DIALOGUE then
+        typeOptions = self:_ProcessCharacterTypeOptions(typeOptions, otherOptions, contextSystem)
+    end
+    
+    -- 合并参数（兼容现有系统）
+    local params = {
+        typeArgs = typeOptions,      -- TypeOptions → typeArgs
+        normalArgs = otherOptions    -- OtherOptions → normalArgs
+    }
     
     -- 如果提供了流式回调，使用流式模式
     if onStream then
@@ -84,6 +105,84 @@ function LlmManager:Chat(chatType, params, onStream, onComplete)
             onComplete(success, result)
         end
     end
+end
+
+---【CharacterChat专用】处理角色对话的 TypeOptions
+---@param typeOptions table 原始的 TypeOptions
+---@param otherOptions table OtherOptions
+---@param contextSystem table 上下文系统
+---@return table 处理后的 TypeOptions
+function LlmManager:_ProcessCharacterTypeOptions(typeOptions, otherOptions, contextSystem)
+    local processed = {}
+    
+    -- 1. 复制所有基础属性
+    for k, v in pairs(typeOptions) do
+        processed[k] = v
+    end
+    
+    -- 2. 基于 npcId 和 sceneId 添加额外信息
+    local npcId = typeOptions.npcId
+    local sceneId = typeOptions.sceneId
+    
+    -- 3. 检查是否是仇人（基于 includePrompts）
+    local includePrompts = otherOptions.includePrompts or {}
+    local isEnemy = false
+    
+    for _, promptType in ipairs(includePrompts) do
+        if promptType == "enemy_context" then
+            isEnemy = true
+            break
+        end
+    end
+    
+    -- 4. 如果是仇人，附带特殊上下文
+    if isEnemy and npcId then
+        print(string.format("[LlmManager] 🎭 检测到仇人对话: %s，附加仇人上下文", npcId))
+        
+        -- 从上下文系统获取仇人的聊天历史
+        local enemyHistory = contextSystem:GetCharacterHistory(npcId) or {}
+        
+        -- 将仇人历史摘要添加到 processed 中
+        if #enemyHistory > 0 then
+            processed.enemyHistorySummary = self:_SummarizeHistory(enemyHistory)
+        end
+        
+        -- 如果有循环上下文，也添加进去
+        for _, promptType in ipairs(includePrompts) do
+            if promptType == "loop_context" then
+                local customPrompts = otherOptions.customPrompts or {}
+                processed.loopContext = customPrompts.loop_context or ""
+                break
+            end
+        end
+    end
+    
+    -- 5. 基于 sceneId 决定 unlock_choice 工具的可用性
+    if sceneId then
+        processed.currentScene = sceneId
+        print(string.format("[LlmManager] 📍 当前场景: %s，AI可以调用 unlock_choice 工具", sceneId))
+    end
+    
+    return processed
+end
+
+---生成聊天历史摘要
+---@param history table 聊天历史
+---@return string 摘要文本
+function LlmManager:_SummarizeHistory(history)
+    local summary = "## 之前的对话摘要\n"
+    local recentCount = math.min(5, #history)  -- 最近5条
+    
+    for i = #history - recentCount + 1, #history do
+        local msg = history[i]
+        if msg.role == "user" then
+            summary = summary .. string.format("- 玩家: %s\n", msg.content)
+        elseif msg.role == "assistant" then
+            summary = summary .. string.format("- 我: %s\n", msg.content)
+        end
+    end
+    
+    return summary
 end
 
 --[[
@@ -158,6 +257,28 @@ function LlmManager:ClearHistory()
     self.systems[Consts.SystemType.LLM_CONTEXT]:ClearHistory()
 end
 
+---切换到指定角色的对话上下文（CHARACTER_DIALOGUE专用）
+---@param npcId string NPC ID
+function LlmManager:SwitchToCharacter(npcId)
+    self.systems[Consts.SystemType.LLM_CONTEXT]:SwitchToCharacter(npcId)
+end
+
+---退出角色对话模式
+function LlmManager:ExitCharacterMode()
+    self.systems[Consts.SystemType.LLM_CONTEXT]:ExitCharacterMode()
+end
+
+---清空指定角色的对话历史
+---@param npcId string NPC ID
+function LlmManager:ClearCharacterHistory(npcId)
+    self.systems[Consts.SystemType.LLM_CONTEXT]:ClearCharacterHistory(npcId)
+end
+
+---清空所有角色的对话历史
+function LlmManager:ClearAllCharacterHistories()
+    self.systems[Consts.SystemType.LLM_CONTEXT]:ClearAllCharacterHistories()
+end
+
 --[[
     模板接口
 --]]
@@ -194,4 +315,5 @@ function LlmManager:Tick(deltaTime)
 end
 
 return LlmManager
+
 

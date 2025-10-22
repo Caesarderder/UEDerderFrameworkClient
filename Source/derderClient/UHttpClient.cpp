@@ -4,67 +4,80 @@
 #include "HttpModule.h"
 #include "Interfaces/IHttpRequest.h"
 #include "Interfaces/IHttpResponse.h"
+#include "Misc/DateTime.h"
 
 UHttpClient::UHttpClient()
-	: LastResponseLength(0)
+	: LastProcessedLength(0)
+	, LastActivityTime(0.0)
+	, RequestStartTime(0.0)
 {
 }
 
 bool UHttpClient::SendPostRequest(const FString& URL, const FString& Headers, const FString& Content, float Timeout)
 {
-	// 取消之前的请求
+	// Cancel previous request if active
 	if (CurrentRequest.IsValid() && CurrentRequest->GetStatus() == EHttpRequestStatus::Processing)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("[UHttpClient] Canceling active request"));
 		CurrentRequest->CancelRequest();
 	}
 	
-	// 重置状态
-	CurrentResponseContent.Empty();
-	LastResponseLength = 0;
+	// Reset state
+	ResetState();
 	
-	// 创建HTTP请求
+	// Create HTTP request (thread-safe)
 	CurrentRequest = FHttpModule::Get().CreateRequest();
 	
 	if (!CurrentRequest.IsValid())
 	{
-		UE_LOG(LogTemp, Error, TEXT("[UHttpClient] 创建HTTP请求失败"));
+		UE_LOG(LogTemp, Error, TEXT("[UHttpClient] Failed to create HTTP request"));
 		return false;
 	}
 	
-	// 设置URL和方法
+	// Set URL and method
 	CurrentRequest->SetURL(URL);
 	CurrentRequest->SetVerb(TEXT("POST"));
 	
-	// 解析并设置请求头
+	// Parse and set headers
 	TMap<FString, FString> HeaderMap = ParseHeaders(Headers);
 	for (const auto& Header : HeaderMap)
 	{
 		CurrentRequest->SetHeader(Header.Key, Header.Value);
-		UE_LOG(LogTemp, Log, TEXT("[UHttpClient] Header: %s = %s"), *Header.Key, *Header.Value);
+		UE_LOG(LogTemp, Verbose, TEXT("[UHttpClient] Header: %s = %s"), *Header.Key, *Header.Value);
 	}
 	
-	// 设置请求体
+	// Set request body
 	CurrentRequest->SetContentAsString(Content);
+	UE_LOG(LogTemp, Log, TEXT("[UHttpClient] Content size: %d bytes"), Content.Len());
 	
-	// 设置超时
-	CurrentRequest->SetTimeout(Timeout);
+	// Set timeout (default 300 seconds for LLM streaming)
+	if (Timeout > 0)
+	{
+		CurrentRequest->SetTimeout(Timeout);
+		UE_LOG(LogTemp, Log, TEXT("[UHttpClient] Timeout: %.1f seconds"), Timeout);
+	}
 	
-	// 绑定进度回调
+	// Bind progress callback (async, called from HTTP thread)
 	CurrentRequest->OnRequestProgress().BindUObject(this, &UHttpClient::OnHttpRequestProgress);
 	
-	// 绑定完成回调
+	// Bind completion callback (async, auto-dispatched to GameThread)
 	CurrentRequest->OnProcessRequestComplete().BindUObject(this, &UHttpClient::OnHttpRequestComplete);
 	
-	// 发送请求
+	// Record start time
+	RequestStartTime = FPlatformTime::Seconds();
+	LastActivityTime = RequestStartTime;
+	
+	// Send async request
 	bool bStarted = CurrentRequest->ProcessRequest();
 	
 	if (bStarted)
 	{
-		UE_LOG(LogTemp, Log, TEXT("[UHttpClient] HTTP请求已发送: %s"), *URL);
+		UE_LOG(LogTemp, Log, TEXT("[UHttpClient] Async request started: %s"), *URL);
 	}
 	else
 	{
-		UE_LOG(LogTemp, Error, TEXT("[UHttpClient] HTTP请求发送失败"));
+		UE_LOG(LogTemp, Error, TEXT("[UHttpClient] Failed to start request"));
+		ResetState();
 	}
 	
 	return bStarted;
@@ -75,7 +88,7 @@ void UHttpClient::CancelRequest()
 	if (CurrentRequest.IsValid())
 	{
 		CurrentRequest->CancelRequest();
-		UE_LOG(LogTemp, Log, TEXT("[UHttpClient] HTTP请求已取消"));
+		UE_LOG(LogTemp, Log, TEXT("[UHttpClient] HTTP request canceled"));
 	}
 }
 
@@ -86,31 +99,50 @@ FString UHttpClient::GetCurrentResponse() const
 
 void UHttpClient::OnHttpRequestProgress(FHttpRequestPtr Request, int32 BytesSent, int32 BytesReceived)
 {
-	// 获取当前响应
+	// Update activity time
+	LastActivityTime = FPlatformTime::Seconds();
+	
+	// Get current response (Note: This callback may be called from HTTP thread)
 	if (Request.IsValid() && Request->GetResponse().IsValid())
 	{
 		FHttpResponsePtr Response = Request->GetResponse();
-		CurrentResponseContent = Response->GetContentAsString();
 		
-		// 触发流式回调
-		OnRequestProgress.Broadcast(BytesSent, BytesReceived);
+		// Get latest response content
+		FString NewResponseContent = Response->GetContentAsString();
+		int32 CurrentLength = NewResponseContent.Len();
 		
-		// 输出调试信息
-		if (CurrentResponseContent.Len() > LastResponseLength)
+		// Only process when new data available
+		if (CurrentLength > LastProcessedLength)
 		{
-			int32 NewChunkSize = CurrentResponseContent.Len() - LastResponseLength;
-			LastResponseLength = CurrentResponseContent.Len();
+			// Extract new chunk (avoid reprocessing)
+			FString NewChunk = NewResponseContent.RightChop(LastProcessedLength);
+			int32 NewChunkSize = NewChunk.Len();
 			
-			UE_LOG(LogTemp, Verbose, TEXT("[UHttpClient] 接收数据: +%d 字节, 总计 %d 字节"), 
-				NewChunkSize, LastResponseLength);
+			// Update internal state
+			CurrentResponseContent = MoveTemp(NewResponseContent);  // Use Move semantics for performance
+			LastProcessedLength = CurrentLength;
+			
+			// Calculate speed
+			double ElapsedTime = LastActivityTime - RequestStartTime;
+			double Speed = ElapsedTime > 0 ? (CurrentLength / ElapsedTime) : 0;
+			
+			UE_LOG(LogTemp, Verbose, TEXT("[UHttpClient] Streaming: +%d bytes | Total: %d bytes | Speed: %.1f B/s"), 
+				NewChunkSize, CurrentLength, Speed);
+			
+			// Trigger streaming callback (pass new chunk)
+			// Note: Delegate will be automatically queued to GameThread
+			OnRequestProgress.Broadcast(BytesSent, BytesReceived, NewChunk);
 		}
 	}
 }
 
 void UHttpClient::OnHttpRequestComplete(FHttpRequestPtr Request, FHttpResponsePtr Response, bool bSuccess)
 {
+	// This callback is automatically executed on GameThread
+	
 	FString ResponseContent;
 	int32 StatusCode = 0;
+	double TotalTime = FPlatformTime::Seconds() - RequestStartTime;
 	
 	if (bSuccess && Response.IsValid())
 	{
@@ -118,17 +150,84 @@ void UHttpClient::OnHttpRequestComplete(FHttpRequestPtr Request, FHttpResponsePt
 		ResponseContent = Response->GetContentAsString();
 		CurrentResponseContent = ResponseContent;
 		
-		UE_LOG(LogTemp, Log, TEXT("[UHttpClient] 请求完成 - 状态码: %d, 响应长度: %d"), 
-			StatusCode, ResponseContent.Len());
+		// Calculate statistics
+		int32 ContentLength = ResponseContent.Len();
+		double AvgSpeed = TotalTime > 0 ? (ContentLength / TotalTime) : 0;
+		
+		if (StatusCode >= 200 && StatusCode < 300)
+		{
+			UE_LOG(LogTemp, Log, TEXT("[UHttpClient] Request completed successfully"));
+		UE_LOG(LogTemp, Log, TEXT("  |-- StatusCode: %d"), StatusCode);
+		UE_LOG(LogTemp, Log, TEXT("  |-- ContentLength: %d bytes (%.2f KB)"), ContentLength, ContentLength / 1024.0);
+		UE_LOG(LogTemp, Log, TEXT("  |-- TotalTime: %.2f sec"), TotalTime);
+		UE_LOG(LogTemp, Log, TEXT("  |-- AvgSpeed: %.1f B/s"), AvgSpeed);
+		}
+		else
+		{
+		UE_LOG(LogTemp, Warning, TEXT("[UHttpClient] Request completed with abnormal status code: %d"), StatusCode);
+		UE_LOG(LogTemp, Warning, TEXT("  |-- Response: %s"), *ResponseContent.Left(200));
+		}
 	}
 	else
 	{
-		UE_LOG(LogTemp, Error, TEXT("[UHttpClient] 请求失败"));
-		ResponseContent = TEXT("请求失败");
+		// Detailed error information
+		FString FailReason = TEXT("Unknown error");
+		
+		if (Request.IsValid())
+		{
+			switch (Request->GetStatus())
+			{
+			case EHttpRequestStatus::Failed:
+				FailReason = TEXT("Request failed");
+				break;
+			case EHttpRequestStatus::Failed_ConnectionError:
+				FailReason = TEXT("Connection error");
+				break;
+			case EHttpRequestStatus::NotStarted:
+				FailReason = TEXT("Request not started");
+				break;
+			default:
+				FailReason = FString::Printf(TEXT("Status: %d"), (int32)Request->GetStatus());
+				break;
+			}
+		}
+		
+		if (Response.IsValid())
+		{
+			StatusCode = Response->GetResponseCode();
+			ResponseContent = Response->GetContentAsString();
+		}
+		
+		UE_LOG(LogTemp, Error, TEXT("[UHttpClient] Request failed"));
+		UE_LOG(LogTemp, Error, TEXT("  |-- Reason: %s"), *FailReason);
+		UE_LOG(LogTemp, Error, TEXT("  |-- StatusCode: %d"), StatusCode);
+		UE_LOG(LogTemp, Error, TEXT("  |-- TotalTime: %.2f sec"), TotalTime);
+		UE_LOG(LogTemp, Error, TEXT("  |-- BytesReceived: %d"), LastProcessedLength);
+		
+		if (!ResponseContent.IsEmpty())
+		{
+			UE_LOG(LogTemp, Error, TEXT("  |-- Response: %s"), *ResponseContent.Left(200));
+		}
 	}
 	
-	// 触发完成回调
+	// Trigger completion callback (already on GameThread)
 	OnRequestComplete.Broadcast(bSuccess, ResponseContent, StatusCode);
+	
+	// Cleanup resources
+	CurrentRequest.Reset();
+}
+
+void UHttpClient::ResetState()
+{
+	CurrentResponseContent.Empty();
+	LastProcessedLength = 0;
+	LastActivityTime = 0.0;
+	RequestStartTime = 0.0;
+}
+
+bool UHttpClient::IsRequestActive() const
+{
+	return CurrentRequest.IsValid() && CurrentRequest->GetStatus() == EHttpRequestStatus::Processing;
 }
 
 TMap<FString, FString> UHttpClient::ParseHeaders(const FString& HeadersString)
@@ -140,13 +239,13 @@ TMap<FString, FString> UHttpClient::ParseHeaders(const FString& HeadersString)
 		return HeaderMap;
 	}
 	
-	// 分割多个请求头（用 | 分隔）
+	// Split multiple headers (separated by |)
 	TArray<FString> HeaderPairs;
 	HeadersString.ParseIntoArray(HeaderPairs, TEXT("|"), true);
 	
 	for (const FString& Pair : HeaderPairs)
 	{
-		// 分割键值对（用 = 分隔）
+		// Split key-value pairs (separated by =)
 		FString Key, Value;
 		if (Pair.Split(TEXT("="), &Key, &Value))
 		{

@@ -115,8 +115,17 @@ function ClaudeProvider:ParseStreamChunk(chunk)
     if eventType == "content_block_delta" then
         local delta = data.delta
         if delta.type == "text_delta" then
+            -- 确保 delta.text 是字符串类型
+            local text = ""
+            if delta.text then
+                if type(delta.text) == "string" then
+                    text = delta.text
+                elseif type(delta.text) == "userdata" then
+                    text = tostring(delta.text)
+                end
+            end
             return {
-                delta = delta.text or "",
+                delta = text,
                 finish_reason = nil
             }
         elseif delta.type == "input_json_delta" then
@@ -162,4 +171,5 @@ function ClaudeProvider:SupportsStreaming()
 end
 
 return ClaudeProvider
+
 

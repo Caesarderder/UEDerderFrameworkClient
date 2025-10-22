@@ -54,9 +54,10 @@ function LlmReActSystem:Process(chatType, params)
         return false, "构建Prompt失败"
     end
     
-    -- 添加用户消息（如果有userInput）
-    if params.userInput then
-        self.contextSystem:AddUserMessage(params.userInput)
+    -- 添加用户消息（从 normalArgs 中提取）
+    local normalArgs = params.normalArgs or {}
+    if normalArgs.userInput then
+        self.contextSystem:AddUserMessage(normalArgs.userInput)
     end
     
     local iteration = 0
@@ -76,6 +77,9 @@ function LlmReActSystem:Process(chatType, params)
         -- 获取模板配置
         local templateConfig = self.promptSystem:GetTemplateConfig(chatType)
         
+        -- 【新增】打印完整的上下文信息
+        self:PrintFullContext(messages, tools, chatType)
+        
         -- 发送请求到LLM
         local success, response = self.llmClient:SendChatRequest(messages, tools, templateConfig)
         
@@ -88,18 +92,33 @@ function LlmReActSystem:Process(chatType, params)
         if response.tool_calls then
             print("[LlmReActSystem] LLM请求调用工具，数量:", #response.tool_calls)
             
-            -- 添加助手消息（带工具调用）
-            self.contextSystem:AddAssistantMessage(
-                "调用工具: " .. response.tool_calls[1]["function"].name
-            )
+            -- 1. 添加 assistant 消息（带 tool_calls）
+            local toolCallsText = "调用工具:"
+            for i, toolCall in ipairs(response.tool_calls) do
+                if i > 1 then toolCallsText = toolCallsText .. ", " end
+                toolCallsText = toolCallsText .. " " .. toolCall["function"].name
+            end
             
-            -- 执行工具调用
+            -- 保存 assistant 消息，包含 tool_calls 对象
+            BM_LlmContext:AddToHistory("assistant", toolCallsText, {
+                tool_calls = response.tool_calls
+            })
+            print(string.format("[LlmReActSystem] ✅ 已保存 assistant 消息（带 %d 个 tool_calls）", #response.tool_calls))
+            
+            -- 2. 执行工具调用
             local toolResults = self.toolSystem:ExecuteToolCalls(response.tool_calls)
             
-            -- 将工具结果添加到上下文
+            -- 3. 将工具结果添加到上下文（带 tool_call_id）
             for _, toolResult in ipairs(toolResults) do
-                BM_LlmContext:AddToHistory("tool", toolResult.content)
+                BM_LlmContext:AddToHistory("tool", toolResult.content, {
+                    tool_call_id = toolResult.tool_call_id,
+                    name = toolResult.name
+                })
+                print(string.format("[LlmReActSystem] ✅ 已保存 tool 消息: %s (id=%s)", 
+                    toolResult.name, toolResult.tool_call_id))
             end
+            
+            print("[LlmReActSystem] ✅ 工具调用历史保存完成")
             
             -- 继续下一轮循环
         else
@@ -148,26 +167,74 @@ function LlmReActSystem:ProcessStream(chatType, params, onStream, onComplete)
         return
     end
     
-    -- 添加用户消息（如果有userInput）
-    if params.userInput then
-        self.contextSystem:AddUserMessage(params.userInput)
+    -- 添加用户消息（从 normalArgs 中提取）
+    local normalArgs = params.normalArgs or {}
+    if normalArgs.userInput then
+        self.contextSystem:AddUserMessage(normalArgs.userInput)
     end
     
-    -- 执行一轮流式请求（暂时不支持流式 + 工具调用的多轮迭代）
+    -- 执行一轮流式请求（支持流式 + 工具调用）
     local messages = self:BuildMessages(chatPrompt, params)
     local toolNames = self.promptSystem:GetTemplateTools(chatType)
     local tools = self:GetToolDefinitions(toolNames)
     local templateConfig = self.promptSystem:GetTemplateConfig(chatType)
     
-    self.llmClient:SendStreamChatRequest(messages, tools, templateConfig, onStream, function(success, fullText)
-        if success then
-            self.contextSystem:AddAssistantMessage(fullText)
+    -- 【新增】打印完整的上下文信息
+    self:PrintFullContext(messages, tools, chatType)
+    
+    self.llmClient:SendStreamChatRequest(
+        messages, 
+        tools, 
+        templateConfig, 
+        onStream,  -- 文本流式回调
+        function(success, fullText)
+            -- HTTP完成回调
+            if success then
+                if fullText ~= "" then
+                    self.contextSystem:AddAssistantMessage(fullText)
+                end
+            end
+            BM_LlmContext.IsProcessing.set(false)
+            if onComplete then
+                onComplete(success, fullText)
+            end
+        end,
+        function(toolCalls)
+            -- 工具调用回调
+            print("[LlmReActSystem] 流式工具调用，数量:", #toolCalls)
+            
+            -- 1. 先添加 assistant 消息（带 tool_calls）
+            local toolCallsText = "调用工具:"
+            for i, toolCall in ipairs(toolCalls) do
+                if i > 1 then toolCallsText = toolCallsText .. ", " end
+                toolCallsText = toolCallsText .. " " .. toolCall["function"].name
+            end
+            
+            -- 保存 assistant 消息，包含 tool_calls 对象
+            BM_LlmContext:AddToHistory("assistant", toolCallsText, {
+                tool_calls = toolCalls
+            })
+            print(string.format("[LlmReActSystem] ✅ 已保存 assistant 消息（带 %d 个 tool_calls）", #toolCalls))
+            
+            -- 2. 执行工具
+            local toolResults = self.toolSystem:ExecuteToolCalls(toolCalls)
+            
+            -- 3. 将工具结果添加到上下文（带 tool_call_id）
+            for _, toolResult in ipairs(toolResults) do
+                BM_LlmContext:AddToHistory("tool", toolResult.content, {
+                    tool_call_id = toolResult.tool_call_id,
+                    name = toolResult.name
+                })
+                print(string.format("[LlmReActSystem] ✅ 已保存 tool 消息: %s (id=%s)", 
+                    toolResult.name, toolResult.tool_call_id))
+            end
+            
+            print("[LlmReActSystem] ✅ 工具调用历史保存完成")
+            
+            -- 可以在这里继续下一轮对话（如果需要）
+            -- 但目前先让它在工具执行后完成
         end
-        BM_LlmContext.IsProcessing.set(false)
-        if onComplete then
-            onComplete(success, fullText)
-        end
-    end)
+    )
 end
 
 ---构建消息列表
@@ -212,12 +279,54 @@ function LlmReActSystem:BuildMessages(chatPrompt, params)
         })
     end
     
-    -- 4. 历史对话
-    for _, msg in ipairs(BM_LlmContext.dataModule.conversationHistory) do
-        table.insert(messages, {
+    -- 3.5. 循环记忆（仅在与仇人对话时提供）
+    -- 检查 params 中是否有 characterName，且角色是仇人
+    local typeArgs = params.typeArgs or {}
+    local characterName = typeArgs.characterName
+    if characterName then
+        -- 检查是否是仇人（可以通过 role == "enemy" 或特定的 characterName 判断）
+        -- 这里简化处理：如果角色名包含"仇人"相关关键词，或者需要在配置中标记
+        local BM_StoryConfig = require("DataLayer.Story.BM_StoryConfig")
+        local npcInfo = BM_StoryConfig:GetNPC(BM_LlmContext.dataModule.currentNpcId or "")
+        
+        if npcInfo and npcInfo.role == "enemy" then
+            local loopMemoriesText = BM_LlmContext:GetLoopMemoriesText()
+            if loopMemoriesText ~= "" then
+                table.insert(messages, {
+                    role = "system",
+                    content = loopMemoriesText
+                })
+                print("[LlmReActSystem] 添加循环记忆到上下文（与仇人对话）")
+            end
+        end
+    end
+    
+    -- 4. 历史对话（完整保留，包括 tool_calls 和 tool 消息）
+    -- 使用 ValidateMessageSequence 确保消息序列正确
+    local validatedHistory = BM_LlmContext:ValidateMessageSequence(BM_LlmContext.dataModule.conversationHistory)
+    
+    for _, msg in ipairs(validatedHistory) do
+        local historyMsg = {
             role = msg.role,
-            content = msg.content
-        })
+            content = msg.content or ""
+        }
+        
+        -- ⭐ 如果是 assistant 消息且包含 tool_calls，必须保留
+        if msg.role == "assistant" and msg.tool_calls then
+            historyMsg.tool_calls = msg.tool_calls
+        end
+        
+        -- ⭐ 如果是 tool 消息，必须包含 tool_call_id 和 name
+        if msg.role == "tool" then
+            if msg.tool_call_id then
+                historyMsg.tool_call_id = msg.tool_call_id
+            end
+            if msg.name then
+                historyMsg.name = msg.name
+            end
+        end
+        
+        table.insert(messages, historyMsg)
     end
     
     return messages
@@ -248,6 +357,104 @@ function LlmReActSystem:GetToolDefinitions(toolNames)
     return filtered
 end
 
+---打印完整的对话上下文（用于调试）
+---@param messages table 消息列表
+---@param tools table 工具定义列表
+---@param chatType string ChatType类型
+function LlmReActSystem:PrintFullContext(messages, tools, chatType)
+    print("=" .. string.rep("=", 78))
+    print("📋 LLM对话上下文打印 - ChatType: " .. (chatType or "unknown"))
+    print("=" .. string.rep("=", 78))
+    
+    -- 打印消息列表
+    print("\n📝 消息列表（共 " .. #messages .. " 条）:")
+    print("-" .. string.rep("-", 78))
+    
+    for i, msg in ipairs(messages) do
+        print(string.format("\n[消息 %d] Role: %s", i, msg.role))
+        
+        -- 打印内容
+        if msg.content and msg.content ~= "" then
+            local content = msg.content
+            -- 如果内容太长，截断显示
+            if #content > 500 then
+                content = content:sub(1, 500) .. "\n... (内容过长，已截断，总长度: " .. #msg.content .. " 字符)"
+            end
+            print("Content:")
+            print(content)
+        end
+        
+        -- 打印 tool_calls（如果有）
+        if msg.tool_calls then
+            print(string.format("Tool Calls: (%d 个)", #msg.tool_calls))
+            for j, toolCall in ipairs(msg.tool_calls) do
+                local funcName = toolCall["function"].name
+                local funcArgs = toolCall["function"].arguments
+                print(string.format("  [%d] %s(%s)", j, funcName, funcArgs))
+            end
+        end
+        
+        -- 打印 tool_call_id（如果有）
+        if msg.tool_call_id then
+            print("Tool Call ID: " .. msg.tool_call_id)
+        end
+        
+        -- 打印 name（工具名称）
+        if msg.name then
+            print("Tool Name: " .. msg.name)
+        end
+    end
+    
+    -- 打印工具列表
+    print("\n" .. string.rep("-", 78))
+    if tools and #tools > 0 then
+        print("\n🔧 可用工具列表（共 " .. #tools .. " 个）:")
+        for i, tool in ipairs(tools) do
+            local funcDef = tool["function"]
+            print(string.format("  [%d] %s - %s", i, funcDef.name, funcDef.description or "无描述"))
+        end
+    else
+        print("\n🔧 可用工具列表: 无")
+    end
+    
+    -- 统计信息
+    print("\n" .. string.rep("-", 78))
+    print("📊 统计信息:")
+    
+    local systemCount = 0
+    local userCount = 0
+    local assistantCount = 0
+    local toolCount = 0
+    local totalChars = 0
+    
+    for _, msg in ipairs(messages) do
+        if msg.role == "system" then
+            systemCount = systemCount + 1
+        elseif msg.role == "user" then
+            userCount = userCount + 1
+        elseif msg.role == "assistant" then
+            assistantCount = assistantCount + 1
+        elseif msg.role == "tool" then
+            toolCount = toolCount + 1
+        end
+        
+        if msg.content then
+            totalChars = totalChars + #msg.content
+        end
+    end
+    
+    print(string.format("  - System 消息: %d 条", systemCount))
+    print(string.format("  - User 消息: %d 条", userCount))
+    print(string.format("  - Assistant 消息: %d 条", assistantCount))
+    print(string.format("  - Tool 消息: %d 条", toolCount))
+    print(string.format("  - 总字符数: %d", totalChars))
+    print(string.format("  - 可用工具数: %d", tools and #tools or 0))
+    
+    print("\n" .. string.rep("=", 78))
+    print("✅ 上下文打印完成")
+    print(string.rep("=", 78) .. "\n")
+end
+
 ---Tick函数，驱动LlmClient
 function LlmReActSystem:Tick(deltaTime)
     if self.llmClient and self.llmClient.Tick then
@@ -256,4 +463,5 @@ function LlmReActSystem:Tick(deltaTime)
 end
 
 return LlmReActSystem
+
 

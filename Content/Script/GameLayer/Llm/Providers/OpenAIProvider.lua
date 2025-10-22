@@ -81,8 +81,19 @@ function OpenAIProvider:ParseStreamChunk(chunk)
     local choice = data.choices[1]
     local delta = choice.delta
     
+    -- 确保 delta.content 是字符串类型
+    local content = ""
+    if delta.content then
+        if type(delta.content) == "string" then
+            content = delta.content
+        elseif type(delta.content) == "userdata" then
+            -- 如果是 userdata，尝试转换为字符串
+            content = tostring(delta.content)
+        end
+    end
+    
     local result = {
-        delta = delta.content or "",
+        delta = content,
         finish_reason = choice.finish_reason,
         tool_calls = delta.tool_calls
     }
@@ -109,4 +120,5 @@ function OpenAIProvider:SupportsStreaming()
 end
 
 return OpenAIProvider
+
 

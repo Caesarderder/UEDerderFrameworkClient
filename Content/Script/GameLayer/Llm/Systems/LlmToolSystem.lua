@@ -155,15 +155,46 @@ end
 function LlmToolSystem:ExecuteToolCalls(toolCalls)
     local results = {}
     
-    for _, toolCall in ipairs(toolCalls) do
+    for i, toolCall in ipairs(toolCalls) do
+        print(string.format("[LlmToolSystem] 执行工具 #%d:", i))
+        print(string.format("  - toolCall.id: %s", tostring(toolCall.id)))
+        print(string.format("  - toolCall.type: %s", tostring(toolCall.type)))
+        
         local toolName = toolCall["function"].name
         local argumentsJson = toolCall["function"].arguments
         
-        -- 解析参数
-        local arguments = json.decode(argumentsJson)
+        print(string.format("  - 工具名: %s", tostring(toolName)))
+        print(string.format("  - 参数JSON类型: %s", type(argumentsJson)))
+        print(string.format("  - 参数JSON内容: %s", tostring(argumentsJson)))
+        
+        -- 解析参数（增加错误处理）
+        local arguments = nil
+        if type(argumentsJson) == "string" then
+            local success, decoded = pcall(json.decode, argumentsJson)
+            if success then
+                arguments = decoded
+                print(string.format("  - ✅ JSON解析成功"))
+            else
+                print(string.format("  - ❌ JSON解析失败: %s", tostring(decoded)))
+                arguments = {}  -- 使用空table作为后备
+            end
+        elseif type(argumentsJson) == "table" then
+            print("  - ℹ️ 参数已经是table，无需解析")
+            arguments = argumentsJson
+        else
+            print("  - ⚠️ 参数类型异常，使用空table")
+            arguments = {}
+        end
         
         -- 执行工具
+        print(string.format("  - 调用工具执行函数，参数类型: %s", type(arguments)))
         local success, result = BM_LlmTool:ExecuteTool(toolName, arguments)
+        
+        if not success then
+            print(string.format("  - ❌ 工具执行失败: %s", tostring(result)))
+        else
+            print(string.format("  - ✅ 工具执行成功"))
+        end
         
         table.insert(results, {
             tool_call_id = toolCall.id,

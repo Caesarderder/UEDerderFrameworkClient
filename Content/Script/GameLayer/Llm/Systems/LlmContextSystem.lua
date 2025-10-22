@@ -66,5 +66,29 @@ function LlmContextSystem:ClearHistory()
     BM_LlmContext:ClearHistory()
 end
 
+-- ==================== 角色对话历史管理 ====================
+
+---切换到指定角色的对话上下文
+---@param npcId string NPC ID
+function LlmContextSystem:SwitchToCharacter(npcId)
+    BM_LlmContext:SwitchToCharacter(npcId)
+end
+
+---退出角色对话模式
+function LlmContextSystem:ExitCharacterMode()
+    BM_LlmContext:ExitCharacterMode()
+end
+
+---清空指定角色的对话历史
+---@param npcId string NPC ID
+function LlmContextSystem:ClearCharacterHistory(npcId)
+    BM_LlmContext:ClearCharacterHistory(npcId)
+end
+
+---清空所有角色的对话历史
+function LlmContextSystem:ClearAllCharacterHistories()
+    BM_LlmContext:ClearAllCharacterHistories()
+end
+
 return LlmContextSystem
 

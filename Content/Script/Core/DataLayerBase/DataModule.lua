@@ -19,24 +19,24 @@ DataModule.Fields = {
 function DataModule:init()
     -- 使用 Fields 中定义的结构进行初始化
     for field, defaultValue in pairs(self.Fields) do
-        self[field] = defaultValue
+        rawset(self, field, defaultValue)
     end
 
     -- 设置元表以支持点语法访问
     local mt = {
         __index = function(t, k)
-            if DataModule.Fields[k] ~= nil then
-                return rawget(t, k)
+            -- 优先返回实例数据
+            local value = rawget(t, k)
+            if value ~= nil then
+                return value
             end
+            -- 返回DataModule的方法
             return DataModule[k]
         end,
         
         __newindex = function(t, k, v)
-            if DataModule.Fields[k] ~= nil then
-                rawset(t, k, v)
-            else
-                error("Attempt to set undefined field: " .. k)
-            end
+            -- 直接设置，不做字段检查（因为nil值字段无法通过pairs遍历）
+            rawset(t, k, v)
         end
     }
     setmetatable(self, mt)
