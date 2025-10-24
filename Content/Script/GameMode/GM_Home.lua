@@ -23,6 +23,14 @@ function M:ReceiveBeginPlay()
     
     GameContext:SetGameMode(self)
     
+    
+    -- ==================== 打开UI ====================
+    -- 获取UIManager
+    local uiManager = GameContext:GetUIManager()
+    uiManager:openUI("Menu/HomeLevel/UI_Home.UI_Home_C", uiManager.ui_layer.WINDOW, nil, self)
+end
+
+function M:init_Story()
     -- ==================== 初始化故事库系统 ====================
     print("[GM_Home] ========== 开始初始化故事系统 ==========")
     
@@ -53,19 +61,6 @@ function M:ReceiveBeginPlay()
     end
     
     print("[GM_Home] ========== 故事系统初始化完成 ==========")
-    
-    -- ==================== 打开UI ====================
-    -- 获取UIManager
-    local uiManager = GameContext:GetUIManager()
-    
-    if uiManager then
-        -- 使用UIManager打开UI，放在WINDOW层
-        -- 传递self作为WorldContextObject（BP_HelloWorld是Actor，可以作为WorldContext）
-        uiManager:openUI("Menu/UI_Dialog1.UI_Dialog1_C", uiManager.ui_layer.WINDOW, nil, self)
-        print("[GM_Home] 通过UIManager打开 UI_Dialog 面板")
-    else
-        print("[GM_Home] Error: 无法获取UIManager")
-    end 
 end
 
 -- function M:ReceiveEndPlay()
