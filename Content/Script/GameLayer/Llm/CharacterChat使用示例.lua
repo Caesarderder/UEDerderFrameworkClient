@@ -22,9 +22,8 @@ function CharacterChatExamples.Example1_NormalNPC(llmMgr)
         characterName = "老乔",
         personality = "友善但谨慎",
         motivation = "保护小镇",
-        trust = 50,
-        emotion = 60,
-        relation = 40,
+        currentIntention = "观察主角的态度，如果主角表现出善意则愿意提供线索",
+        background = "老乔是小镇的老居民，经历过很多事情，对镇上的人和事都很熟悉。他本质善良但因为见过太多事情而变得谨慎。",
         sceneId = "scene_town_square"
     }
     
@@ -77,9 +76,10 @@ function CharacterChatExamples.Example2_EnemyWithHistory(llmMgr, currentLoopCoun
         characterName = "雷克斯",
         personality = "狡猾、执着、神经质",
         motivation = "让所有人在灾难中死亡",
-        trust = 10,
-        emotion = 30,
-        relation = -50,
+        currentIntention = "掩饰自己的灾难计划，同时试探主角是否察觉到异常，必要时威胁或误导主角",
+        background = [[雷克斯曾经是镇上受人尊敬的科学家，但在一次实验事故后失去了家人。
+他将责任归咎于镇上的所有人，认为大家的冷漠导致了悲剧。
+现在他策划着让所有人都陪葬的疯狂计划，并且记得每次循环的经历。]],
         sceneId = "scene_factory"
     }
     
@@ -151,9 +151,8 @@ function CharacterChatExamples.ComparisonOldVsNew()
         characterName = "老乔",
         personality = "友善但谨慎",
         motivation = "保护小镇",
-        trust = 50,
-        emotion = 60,
-        relation = 40
+        currentIntention = "观察主角，根据对话内容做出自然反应",
+        background = "老乔是小镇的老居民，经验丰富，对镇上的事情很了解。"
     }
     
     local normalArgs_old = {
@@ -171,9 +170,8 @@ function CharacterChatExamples.ComparisonOldVsNew()
         characterName = "老乔",
         personality = "友善但谨慎",
         motivation = "保护小镇",
-        trust = 50,
-        emotion = 60,
-        relation = 40
+        currentIntention = "观察主角，根据对话内容做出自然反应",
+        background = "老乔是小镇的老居民，经验丰富，对镇上的事情很了解。"
     }
     
     local otherOptions_new = {
@@ -254,9 +252,8 @@ function CharacterChatExamples.Example5_UIIntegration(ui_dialog)
             characterName = currentNpcInfo.name,
             personality = currentNpcInfo.personality,
             motivation = currentNpcInfo.motivation,
-            trust = currentNpcInfo.trust,
-            emotion = currentNpcInfo.emotion,
-            relation = currentNpcInfo.relation,
+            currentIntention = currentNpcInfo.currentIntention or "观察主角，根据对话内容做出自然反应",
+            background = currentNpcInfo.background or "",
             sceneId = currentSceneId
         }
         

@@ -626,6 +626,56 @@ function BM_StoryRuntime:GetCurrentStoryId()
     return self.dataModule.currentStoryId
 end
 
+-- ==================== 游戏结束状态管理 ====================
+
+---设置游戏结束状态
+---@param isEnded boolean 是否结束
+---@param endingType string|nil 结局类型（good/bad/neutral）
+---@param reason string|nil 结束原因
+function BM_StoryRuntime:SetGameEnded(isEnded, endingType, reason)
+    self.dataModule.isGameEnded = isEnded
+    self.dataModule.endingType = endingType
+    self.dataModule.endingReason = reason
+    
+    if isEnded then
+        print(string.rep("=", 70))
+        print(string.format("【游戏结束】"))
+        print(string.format("  结局类型: %s", endingType or "未知"))
+        print(string.format("  原因: %s", reason or "未知"))
+        print(string.rep("=", 70))
+    end
+end
+
+---获取游戏是否已结束
+---@return boolean 是否已结束
+function BM_StoryRuntime:IsGameEnded()
+    return self.dataModule.isGameEnded == true
+end
+
+---获取结局类型
+---@return string|nil 结局类型
+function BM_StoryRuntime:GetEndingType()
+    return self.dataModule.endingType
+end
+
+---获取结束原因
+---@return string|nil 结束原因
+function BM_StoryRuntime:GetEndingReason()
+    return self.dataModule.endingReason
+end
+
+---设置新循环标记（用于标识AI是否调用了start_new_loop工具）
+---@param shouldStartNewLoop boolean 是否应该开启新循环
+function BM_StoryRuntime:SetShouldStartNewLoop(shouldStartNewLoop)
+    self.dataModule.shouldStartNewLoop = shouldStartNewLoop
+end
+
+---获取是否应该开启新循环
+---@return boolean 是否应该开启新循环
+function BM_StoryRuntime:GetShouldStartNewLoop()
+    return self.dataModule.shouldStartNewLoop == true
+end
+
 -- ==================== 多故事系统支持 ====================
 
 ---清空所有运行时状态（用于切换故事）
@@ -651,6 +701,10 @@ function BM_StoryRuntime:Clear()
     self.dataModule.startTime = 0
     self.dataModule.currentLoopStartTime = 0
     self.dataModule.totalPlayTime = 0
+    self.dataModule.isGameEnded = false
+    self.dataModule.endingType = nil
+    self.dataModule.endingReason = nil
+    self.dataModule.shouldStartNewLoop = false
     
     print("[BM_StoryRuntime] 运行时状态已清空")
 end
@@ -705,15 +759,73 @@ function BM_StoryRuntime:GetDynamicChoice(choiceId)
     return nil
 end
 
+---删除指定的动态抉择（单个）
+---@param sceneId string 场景ID
+---@param choiceId string 抉择ID
+---@return table 操作结果 {success: boolean, error: string}
+function BM_StoryRuntime:RemoveDynamicChoice(sceneId, choiceId)
+    if not sceneId or not choiceId then
+        return {
+            success = false,
+            error = "场景ID或抉择ID为空"
+        }
+    end
+    
+    -- 检查场景是否存在
+    if not self.dataModule.dynamicChoices[sceneId] then
+        return {
+            success = false,
+            error = string.format("场景 %s 没有动态抉择", sceneId)
+        }
+    end
+    
+    -- 检查抉择是否存在
+    if not self.dataModule.dynamicChoices[sceneId][choiceId] then
+        return {
+            success = false,
+            error = string.format("抉择 %s 不存在", choiceId)
+        }
+    end
+    
+    -- 删除抉择
+    local choiceName = self.dataModule.dynamicChoices[sceneId][choiceId].name
+    self.dataModule.dynamicChoices[sceneId][choiceId] = nil
+    
+    print(string.format("[BM_StoryRuntime] ✅ 删除动态抉择: %s (场景: %s)", choiceName, sceneId))
+    
+    return {
+        success = true,
+        message = string.format("已删除抉择: %s", choiceName)
+    }
+end
+
 ---清空指定场景的动态抉择（通常在场景切换或循环重置时调用）
 ---@param sceneId string 场景ID
+---@return table 操作结果 {success: boolean, error: string}
 function BM_StoryRuntime:ClearDynamicChoices(sceneId)
     if sceneId then
+        local count = 0
+        if self.dataModule.dynamicChoices[sceneId] then
+            for _ in pairs(self.dataModule.dynamicChoices[sceneId]) do
+                count = count + 1
+            end
+        end
+        
         self.dataModule.dynamicChoices[sceneId] = {}
-        print(string.format("[BM_StoryRuntime] 清空场景 %s 的动态抉择", sceneId))
+        print(string.format("[BM_StoryRuntime] 清空场景 %s 的 %d 个动态抉择", sceneId, count))
+        
+        return {
+            success = true,
+            message = string.format("已清空 %d 个动态抉择", count)
+        }
     else
         self.dataModule.dynamicChoices = {}
         print("[BM_StoryRuntime] 清空所有动态抉择")
+        
+        return {
+            success = true,
+            message = "已清空所有动态抉择"
+        }
     end
 end
 

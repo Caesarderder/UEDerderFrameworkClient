@@ -314,21 +314,35 @@ function GameStoryTools.RegisterAllTools(llmMgr)
                 print(string.format("[Tool]    抉择ID: %s (动态生成)", choiceId))
                 print(string.format("[Tool]    抉择名称: %s", args.choiceName))
                 
-                -- 通知UI刷新抉择按钮
-                local UI_Dialog1 = require("UI.Menu.UI_Dialog1")
-                print(string.format("[Tool] 检查UI实例: Instance=%s", tostring(UI_Dialog1.Instance)))
+                -- 通知UI刷新抉择按钮（支持 UI_Dialog1 和 UI_StoryScene）
+                local uiRefreshed = false
                 
-                if UI_Dialog1.Instance then
-                    print("[Tool] ✅ UI实例存在，调用刷新方法...")
+                -- 尝试刷新 UI_Dialog1（如果存在）
+                local success1, UI_Dialog1 = pcall(require, "UI.Menu.UI_Dialog1")
+                if success1 and UI_Dialog1 and UI_Dialog1.Instance then
+                    print("[Tool] ✅ 检测到 UI_Dialog1.Instance，调用刷新...")
                     
                     if UI_Dialog1.Instance.RefreshSceneDecisionOnly then
                         UI_Dialog1.Instance:RefreshSceneDecisionOnly()
-                        print("[Tool] ✅ UI抉择按钮已刷新")
-                    else
-                        print("[Tool] ❌ RefreshSceneDecisionOnly 方法不存在")
+                        print("[Tool] ✅ UI_Dialog1 抉择按钮已刷新")
+                        uiRefreshed = true
                     end
-                else
-                    print("[Tool] ❌ UI_Dialog1.Instance 为 nil，无法刷新UI")
+                end
+                
+                -- 尝试刷新 UI_StoryScene（如果存在）
+                local success2, UI_StoryScene = pcall(require, "UI.Menu.UI_StoryScene")
+                if success2 and UI_StoryScene and UI_StoryScene.Instance then
+                    print("[Tool] ✅ 检测到 UI_StoryScene.Instance，调用刷新...")
+                    
+                    if UI_StoryScene.Instance.RefreshSceneDecisionOnly then
+                        UI_StoryScene.Instance:RefreshSceneDecisionOnly()
+                        print("[Tool] ✅ UI_StoryScene 抉择按钮已刷新")
+                        uiRefreshed = true
+                    end
+                end
+                
+                if not uiRefreshed then
+                    print("[Tool] ⚠️ 警告：没有找到可用的UI实例，无法刷新UI")
                 end
                 
                 print(string.rep("=", 70) .. "\n")
@@ -380,6 +394,11 @@ function GameStoryTools.RegisterAllTools(llmMgr)
             print(string.format("[Tool] 🔧 start_new_loop 被调用: %s", args.reason or "未知原因"))
             print(string.rep("=", 70))
             
+            -- 设置新循环标记（UI会在抉择叙事完成后检查这个标记）
+            local BM_StoryRuntime = require("DataLayer.Story.BM_StoryRuntime")
+            BM_StoryRuntime:SetShouldStartNewLoop(true)
+            print("[Tool] ✅ 已设置新循环标记")
+            
             -- 使用 SceneStateManager 开始新循环
             local result = SceneStateManager.StartNewLoop(args.reason)
             
@@ -387,20 +406,15 @@ function GameStoryTools.RegisterAllTools(llmMgr)
                 print(string.format("[Tool] ✅ 成功开始第 %d 次循环", result.newLoopCount))
                 print(string.format("[Tool]    重置原因: %s", args.reason or "未知"))
                 
-                -- 通知UI显示新循环信息
-                local UI_Dialog1 = require("UI.Menu.UI_Dialog1")
-                if UI_Dialog1.Instance then
-                    UI_Dialog1.Instance:AddSystemMessage(string.format("【新循环】第 %d 次循环开始", result.newLoopCount))
-                    UI_Dialog1.Instance:ShowSceneInfo()
-                    UI_Dialog1.Instance:RefreshCharacterSelectionAndSceneDecision()
-                end
+                -- 不再在这里直接刷新UI，而是由 UI_StoryScene.OnChoiceNarrativeComplete 统一处理
                 
                 print(string.rep("=", 70) .. "\n")
                 
                 return {
                     success = true,
                     message = string.format("开始第 %d 次循环", result.newLoopCount),
-                    newLoopCount = result.newLoopCount
+                    newLoopCount = result.newLoopCount,
+                    action = "start_new_loop"
                 }
             else
                 print(string.format("[Tool] ❌ 开始新循环失败: %s", result.error))
@@ -447,14 +461,25 @@ function GameStoryTools.RegisterAllTools(llmMgr)
                     print(string.format("[Tool]    切换原因: %s", args.reason))
                 end
                 
-                -- 通知UI更新
-                local UI_Dialog1 = require("UI.Menu.UI_Dialog1")
-                if UI_Dialog1.Instance then
+                -- 通知UI更新（支持 UI_Dialog1 和 UI_StoryScene）
+                local success1, UI_Dialog1 = pcall(require, "UI.Menu.UI_Dialog1")
+                if success1 and UI_Dialog1 and UI_Dialog1.Instance then
                     if args.reason then
                         UI_Dialog1.Instance:AddSystemMessage(string.format("【场景切换】%s", args.reason))
                     end
                     UI_Dialog1.Instance:ShowSceneInfo()
                     UI_Dialog1.Instance:RefreshCharacterSelectionAndSceneDecision()
+                    print("[Tool] ✅ UI_Dialog1 已刷新")
+                end
+                
+                local success2, UI_StoryScene = pcall(require, "UI.Menu.UI_StoryScene")
+                if success2 and UI_StoryScene and UI_StoryScene.Instance then
+                    -- 显示场景切换提示
+                    local message = string.format("【场景切换】%s\n\n%s", 
+                        result.sceneInfo.name, 
+                        args.reason or "")
+                    UI_StoryScene.Instance:ShowDialogOverlay(message)
+                    print("[Tool] ✅ UI_StoryScene 已刷新")
                 end
                 
                 print(string.rep("=", 70) .. "\n")
@@ -501,12 +526,19 @@ function GameStoryTools.RegisterAllTools(llmMgr)
             print(string.format("[Tool] ✅ 继续当前循环"))
             print(string.format("[Tool]    原因: %s", args.reason or "未知"))
             
-            -- 通知UI刷新（抉择可能有变化）
-            local UI_Dialog1 = require("UI.Menu.UI_Dialog1")
-            if UI_Dialog1.Instance then
+            -- 通知UI刷新（抉择可能有变化）（支持 UI_Dialog1 和 UI_StoryScene）
+            local success1, UI_Dialog1 = pcall(require, "UI.Menu.UI_Dialog1")
+            if success1 and UI_Dialog1 and UI_Dialog1.Instance then
                 UI_Dialog1.Instance:AddSystemMessage(string.format("【故事继续】%s", args.reason))
-                -- 刷新抉择按钮（可能有新的抉择解锁）
                 UI_Dialog1.Instance:RefreshSceneDecisionOnly()
+                print("[Tool] ✅ UI_Dialog1 已刷新")
+            end
+            
+            local success2, UI_StoryScene = pcall(require, "UI.Menu.UI_StoryScene")
+            if success2 and UI_StoryScene and UI_StoryScene.Instance then
+                -- 不需要特别显示，只刷新抉择按钮即可
+                UI_StoryScene.Instance:RefreshSceneDecisionOnly()
+                print("[Tool] ✅ UI_StoryScene 已刷新")
             end
             
             print(string.rep("=", 70) .. "\n")
@@ -548,26 +580,12 @@ function GameStoryTools.RegisterAllTools(llmMgr)
             print(string.format("[Tool]    结束原因: %s", args.reason or "未知"))
             print(string.format("[Tool]    结局类型: %s", endingType))
             
-            -- 设置游戏结束标记
+            -- 设置游戏结束标记（UI会在抉择叙事完成后检查这个标记）
             local BM_StoryRuntime = require("DataLayer.Story.BM_StoryRuntime")
             BM_StoryRuntime:SetGameEnded(true, endingType, args.reason)
+            print("[Tool] ✅ 已设置游戏结束标记")
             
-            -- 通知UI显示结局
-            local UI_Dialog1 = require("UI.Menu.UI_Dialog1")
-            if UI_Dialog1.Instance then
-                local endingEmoji = {
-                    good = "🎉",
-                    bad = "💔",
-                    neutral = "🌟"
-                }
-                local emoji = endingEmoji[endingType] or "🌟"
-                UI_Dialog1.Instance:AddSystemMessage(string.format("%s【游戏结束】%s", emoji, args.reason))
-                
-                -- 显示结局界面（可以后续实现）
-                if UI_Dialog1.Instance.ShowEndingScreen then
-                    UI_Dialog1.Instance:ShowEndingScreen(endingType, args.reason)
-                end
-            end
+            -- 不再在这里直接刷新UI，而是由 UI_StoryScene.OnChoiceNarrativeComplete 统一处理
             
             print(string.rep("=", 70) .. "\n")
             

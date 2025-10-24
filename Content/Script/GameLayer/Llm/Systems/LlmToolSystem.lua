@@ -134,6 +134,49 @@ function LlmToolSystem:RegisterBuiltInTools()
             }
         end
     })
+    
+    -- 更新NPC当前意图
+    self:RegisterTool({
+        name = "update_npc_intention",
+        description = "根据对话进展动态更新NPC的当前意图状态",
+        parameters = {
+            type = "object",
+            properties = {
+                npcId = {
+                    type = "string",
+                    description = "NPC的ID"
+                },
+                newIntention = {
+                    type = "string",
+                    description = "NPC的新意图状态（描述NPC现在想做什么、引导主角做什么）"
+                },
+                reason = {
+                    type = "string",
+                    description = "更新意图的原因（可选）"
+                }
+            },
+            required = {"npcId", "newIntention"}
+        },
+        execute = function(args)
+            print(string.format("[Tool] 更新NPC意图: %s -> %s", args.npcId, args.newIntention))
+            if args.reason then
+                print(string.format("  原因: %s", args.reason))
+            end
+            
+            -- 触发事件通知，由UI层处理实际更新
+            local EventSystem = require("GameLayer.Event.EventSystem")
+            EventSystem:TriggerEvent("OnNpcIntentionChanged", {
+                npcId = args.npcId,
+                newIntention = args.newIntention,
+                reason = args.reason
+            })
+            
+            return {
+                success = true,
+                message = string.format("NPC[%s]的意图已更新", args.npcId)
+            }
+        end
+    })
 end
 
 ---注册工具
@@ -165,29 +208,51 @@ function LlmToolSystem:ExecuteToolCalls(toolCalls)
         
         print(string.format("  - 工具名: %s", tostring(toolName)))
         print(string.format("  - 参数JSON类型: %s", type(argumentsJson)))
-        print(string.format("  - 参数JSON内容: %s", tostring(argumentsJson)))
+        print(string.format("  - 参数JSON内容(原始): %s", tostring(argumentsJson)))
+        
+        -- 🔥 清理 argumentsJson：移除可能存在的 userdata 后缀
+        if type(argumentsJson) == "string" then
+            -- 移除 "userdata: xxxxx" 这种后缀
+            argumentsJson = argumentsJson:match("^(.-)userdata:") or argumentsJson
+            -- 移除可能的尾部空白
+            argumentsJson = argumentsJson:match("^%s*(.-)%s*$") or argumentsJson
+            print(string.format("  - 参数JSON内容(清理后): %s", argumentsJson))
+        end
         
         -- 解析参数（增加错误处理）
-        local arguments = nil
+        local arguments = {}  -- 🔥 默认使用空table
+        
         if type(argumentsJson) == "string" then
             local success, decoded = pcall(json.decode, argumentsJson)
-            if success then
+            if success and decoded ~= nil then
                 arguments = decoded
-                print(string.format("  - ✅ JSON解析成功"))
+                print(string.format("  - ✅ JSON解析成功，参数类型: %s", type(decoded)))
             else
-                print(string.format("  - ❌ JSON解析失败: %s", tostring(decoded)))
+                print(string.format("  - ❌ JSON解析失败或返回nil: %s", tostring(decoded)))
                 arguments = {}  -- 使用空table作为后备
             end
         elseif type(argumentsJson) == "table" then
             print("  - ℹ️ 参数已经是table，无需解析")
             arguments = argumentsJson
         else
-            print("  - ⚠️ 参数类型异常，使用空table")
+            print(string.format("  - ⚠️ 参数类型异常 (%s)，使用空table", type(argumentsJson)))
+            arguments = {}
+        end
+        
+        -- 🔥 最后的保险：确保 arguments 不为 nil
+        if arguments == nil then
+            print("  - ⚠️ 警告：arguments 为 nil，使用空table")
             arguments = {}
         end
         
         -- 执行工具
         print(string.format("  - 调用工具执行函数，参数类型: %s", type(arguments)))
+        if type(arguments) == "table" then
+            print(string.format("  - 参数内容: choiceName=%s, description=%s", 
+                tostring(arguments.choiceName), 
+                tostring(arguments.description)))
+        end
+        
         local success, result = BM_LlmTool:ExecuteTool(toolName, arguments)
         
         if not success then

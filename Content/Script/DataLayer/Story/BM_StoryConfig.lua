@@ -104,7 +104,11 @@ function BM_StoryConfig:GetSceneChoiceGuidancePrompt(sceneId)
     local parts = {}
     
     table.insert(parts, "## 本场景抉择生成指导")
-    table.insert(parts, "\n**重要：你在生成抉择时必须遵循以下规则！**")
+    table.insert(parts, "\n**重要提示：**")
+    table.insert(parts, "- 请积极主动地为玩家解锁抉择！")
+    table.insert(parts, "- 只要对话涉及相关内容，就应该立即生成对应的抉择")
+    table.insert(parts, "- 不要等待太多轮对话，1-2轮即可开始解锁")
+    table.insert(parts, "- 以下规则是为了确保抉择符合场景，而不是限制你生成抉择的频率")
     
     -- 允许的抉择类型
     if guidance.allowedTypes and #guidance.allowedTypes > 0 then
@@ -124,11 +128,12 @@ function BM_StoryConfig:GetSceneChoiceGuidancePrompt(sceneId)
     
     -- 推荐示例
     if guidance.examples and #guidance.examples > 0 then
-        table.insert(parts, "\n### 推荐的抉择示例（仅供参考）")
-        table.insert(parts, "你可以参考以下示例，但不要照搬，要根据对话内容动态生成：")
+        table.insert(parts, "\n### 推荐的抉择示例（积极参考！）")
+        table.insert(parts, "**这些只是参考示例，你应该根据对话内容创造更多相关的抉择：**")
         for _, example in ipairs(guidance.examples) do
             table.insert(parts, "- \"" .. example .. "\"")
         end
+        table.insert(parts, "\n💡 提示：不要局限于这些示例，只要对话中出现相关话题，就可以立即生成对应的抉择！")
     end
     
     return table.concat(parts, "\n")

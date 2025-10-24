@@ -134,6 +134,17 @@ function LlmClientSystem:SendStreamChatRequest(messages, tools, config, onDelta,
     
     local fullText = ""
     
+    -- 🔥 启动流式接收超时检测
+    self.streamSystem:StartStreaming(function(success, text)
+        -- 超时触发的完成回调
+        fullText = text or fullText
+        if onComplete then
+            print(string.format("[LlmClientSystem] 流式接收完成（%s），总计 %d 字符", 
+                success and "成功" or "失败", #fullText))
+            onComplete(success, fullText)
+        end
+    end)
+    
     -- 发送流式请求
     self.httpClient:PostStream(
         provider:GetApiUrl(),
@@ -145,15 +156,15 @@ function LlmClientSystem:SendStreamChatRequest(messages, tools, config, onDelta,
                 function(delta)
                     -- 文本增量回调
                     fullText = fullText .. delta
+                    self.streamSystem.streamFullText = fullText  -- 🔥 同步更新累积文本
                     if onDelta then
                         onDelta(delta)
                     end
                 end, 
                 function()
-                    -- 流式完成回调
-                    if onComplete then
-                        onComplete(true, fullText)
-                    end
+                    -- 流式完成回调（正常结束）
+                    -- 注意：StopStreaming已经在ParseStream中调用过了
+                    -- 这里不需要再次触发onComplete，避免重复
                 end,
                 function(toolCalls)
                     -- 工具调用回调
@@ -175,10 +186,15 @@ function LlmClientSystem:SendStreamChatRequest(messages, tools, config, onDelta,
     )
 end
 
----Tick函数，驱动HTTP协程
+---Tick函数，驱动HTTP协程和流式超时检测
 function LlmClientSystem:Tick(deltaTime)
     if self.httpClient and self.httpClient.Tick then
         self.httpClient:Tick(deltaTime)
+    end
+    
+    -- 🔥 驱动流式超时检测
+    if self.streamSystem and self.streamSystem.Tick then
+        self.streamSystem:Tick(deltaTime)
     end
 end
 

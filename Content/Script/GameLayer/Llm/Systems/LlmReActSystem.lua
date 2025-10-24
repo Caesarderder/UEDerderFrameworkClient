@@ -373,15 +373,10 @@ function LlmReActSystem:PrintFullContext(messages, tools, chatType)
     for i, msg in ipairs(messages) do
         print(string.format("\n[消息 %d] Role: %s", i, msg.role))
         
-        -- 打印内容
+        -- 打印内容（完整内容，不截断）
         if msg.content and msg.content ~= "" then
-            local content = msg.content
-            -- 如果内容太长，截断显示
-            if #content > 500 then
-                content = content:sub(1, 500) .. "\n... (内容过长，已截断，总长度: " .. #msg.content .. " 字符)"
-            end
-            print("Content:")
-            print(content)
+            print("Content: (" .. #msg.content .. " 字符)")
+            print(msg.content)
         end
         
         -- 打印 tool_calls（如果有）
@@ -405,19 +400,32 @@ function LlmReActSystem:PrintFullContext(messages, tools, chatType)
         end
     end
     
-    -- 打印工具列表
+    -- 打印工具列表（完整内容）
     print("\n" .. string.rep("-", 78))
     if tools and #tools > 0 then
         print("\n🔧 可用工具列表（共 " .. #tools .. " 个）:")
         for i, tool in ipairs(tools) do
             local funcDef = tool["function"]
-            print(string.format("  [%d] %s - %s", i, funcDef.name, funcDef.description or "无描述"))
+            print(string.format("\n  [%d] %s", i, funcDef.name))
+            print("      描述: " .. (funcDef.description or "无描述"))
+            
+            -- 打印完整的参数定义
+            if funcDef.parameters then
+                local json = require("rapidjson")
+                local paramsJson = json.encode(funcDef.parameters, {
+                    pretty = true,
+                    sort_keys = true,
+                    indent = "      "
+                })
+                print("      参数定义:")
+                print(paramsJson)
+            end
         end
     else
         print("\n🔧 可用工具列表: 无")
     end
     
-    -- 统计信息
+    -- 统计信息（增加token估算）
     print("\n" .. string.rep("-", 78))
     print("📊 统计信息:")
     
@@ -443,12 +451,22 @@ function LlmReActSystem:PrintFullContext(messages, tools, chatType)
         end
     end
     
+    -- Token估算：混合中英文按平均2.5字符=1token计算
+    local estimatedTokens = math.ceil(totalChars / 2.5)
+    
+    -- 工具定义也会占用token，简单估算每个工具约100-200 tokens
+    local toolTokens = (#tools > 0) and (#tools * 150) or 0
+    local totalEstimatedTokens = estimatedTokens + toolTokens
+    
     print(string.format("  - System 消息: %d 条", systemCount))
     print(string.format("  - User 消息: %d 条", userCount))
     print(string.format("  - Assistant 消息: %d 条", assistantCount))
     print(string.format("  - Tool 消息: %d 条", toolCount))
     print(string.format("  - 总字符数: %d", totalChars))
+    print(string.format("  - 消息 Token 估算: ~%d tokens", estimatedTokens))
     print(string.format("  - 可用工具数: %d", tools and #tools or 0))
+    print(string.format("  - 工具定义 Token 估算: ~%d tokens", toolTokens))
+    print(string.format("  - 总 Token 估算: ~%d tokens", totalEstimatedTokens))
     
     print("\n" .. string.rep("=", 78))
     print("✅ 上下文打印完成")

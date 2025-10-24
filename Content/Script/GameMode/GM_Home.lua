@@ -23,6 +23,8 @@ function M:ReceiveBeginPlay()
     
     GameContext:SetGameMode(self)
     
+    -- 🔥 初始化故事系统（必须在打开UI之前）
+    self:init_Story()
     
     -- ==================== 打开UI ====================
     -- 获取UIManager
@@ -32,35 +34,21 @@ end
 
 function M:init_Story()
     -- ==================== 初始化故事库系统 ====================
-    print("[GM_Home] ========== 开始初始化故事系统 ==========")
+    print("[GM_Home] ========== 开始初始化故事库 ==========")
     
-    -- 1. 初始化故事库（加载所有故事元信息）
+    -- 只初始化故事库（加载所有故事元信息），不加载具体故事
+    -- 具体故事将在 UI_StoryScene 中根据用户选择动态加载
     local initSuccess, initError = StoryLibraryManager:Initialize()
     if not initSuccess then
-        print("[GM_Home] 错误: 故事库初始化失败 - " .. (initError or "未知错误"))
-        return
+        print("[GM_Home] ❌ 错误: 故事库初始化失败 - " .. (initError or "未知错误"))
+        return false
     end
     
-    print("[GM_Home] ✓ 故事库初始化成功")
+    print("[GM_Home] ✅ 故事库初始化成功")
+    print("[GM_Home] 💡 等待用户在 UI_Home 中选择故事...")
+    print("[GM_Home] ========== 故事库初始化完成 ==========")
     
-    -- 2. 加载洛阳帽妖灾劫故事
-    print("[GM_Home] 开始加载洛阳帽妖灾劫故事...")
-    local loadResult = StoryLibraryManager:LoadStory("story_school")
-    
-    if loadResult.success then
-        print("[GM_Home] ✓ 洛阳帽妖灾劫故事加载成功!")
-        print(string.format("[GM_Home]   故事: %s", loadResult.story.title))
-        print(string.format("[GM_Home]   难度: %s", loadResult.story.difficulty))
-        print(string.format("[GM_Home]   预计时长: %s", loadResult.story.estimatedTime))
-        
-        -- 显示当前状态
-        StoryLibraryManager:DebugPrint()
-    else
-        print("[GM_Home] 错误: 洛阳帽妖灾劫故事加载失败 - " .. (loadResult.error or "未知错误"))
-        return
-    end
-    
-    print("[GM_Home] ========== 故事系统初始化完成 ==========")
+    return true
 end
 
 -- function M:ReceiveEndPlay()

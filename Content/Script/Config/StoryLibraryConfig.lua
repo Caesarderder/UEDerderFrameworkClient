@@ -4,33 +4,6 @@
 
 return {
     stories = {
-        -- Story 1: 囧囧的校园循环解谜（校园社死时间循环）
-        {
-            id = "story_school",
-            title = "囧囧的校园奇遇",
-            titleEn = "Jojo's Campus Loop",
-            description = "你是大一新生囧囧，在迎新晚会抽中大奖却遭遇史诗级社死！更离奇的是，你陷入了时间循环，反复经历这场噩梦。唯一的出路：揪出策划这一切的凶手，打破循环！",
-            descriptionDetail = [[
-【故事背景】校园 | 现代 | ACG文化
-【核心冲突】抽奖大奖竟是低俗漫画原稿 → 全校社死 → 时间循环
-【主要角色】文艺委员小雅（唯一凶手）、班长阿明、漫画社小峰等
-【解谜机制】搜集证据、识破伪装、揭穿阴谋、摧毁循环媒介
-【情感主题】无心冒犯的代价、创作理念的冲突、社交恐惧与成长]],
-            tags = {"time_loop", "campus", "mystery", "social_death", "single_culprit", "modern_china", "acg_culture"},
-            difficulty = "Medium",
-            estimatedTime = "2-3小时",
-            configPath = "Config.SchoolJojoConfig",
-            thumbnail = "",
-            
-            -- 额外元数据
-            playerCharacter = "囧囧（大一新生，漫画爱好者）",
-            mainAntagonist = "小雅（文艺委员，魔法使用者）",
-            loopMechanic = "单人循环（只有玩家记得）",
-            endingCondition = "找出凶手、搜集证据、揭穿阴谋、摧毁循环媒介",
-            themes = {"社交恐惧", "创作理念冲突", "无心伤害的后果", "校园人际关系"},
-            recommended = true  -- 推荐新手从这个故事开始
-        },
-        
         -- Story 2: 洛阳帽妖灾劫（古代时间循环悬疑喜剧）
         {
             id = "story_luoyang",
@@ -57,7 +30,34 @@ return {
             themes = {"科举冤屈", "前世孽缘", "流言的力量", "复仇与救赎", "官场人情"},
             recommended = false
         },
-        
+
+        -- Story 1: 囧囧的校园循环解谜（校园社死时间循环）
+        {
+            id = "story_school",
+            title = "囧囧的校园奇遇",
+            titleEn = "Jojo's Campus Loop",
+            description = "你是大一新生囧囧，在迎新晚会抽中大奖却遭遇史诗级社死！更离奇的是，你陷入了时间循环，反复经历这场噩梦。唯一的出路：揪出策划这一切的凶手，打破循环！",
+            descriptionDetail = [[
+【故事背景】校园 | 现代 | ACG文化
+【核心冲突】抽奖大奖竟是低俗漫画原稿 → 全校社死 → 时间循环
+【主要角色】文艺委员小雅（唯一凶手）、班长阿明、漫画社小峰等
+【解谜机制】搜集证据、识破伪装、揭穿阴谋、摧毁循环媒介
+【情感主题】无心冒犯的代价、创作理念的冲突、社交恐惧与成长]],
+            tags = {"time_loop", "campus", "mystery", "social_death", "single_culprit", "modern_china", "acg_culture"},
+            difficulty = "Medium",
+            estimatedTime = "2-3小时",
+            configPath = "Config.SchoolJojoConfig",
+            thumbnail = "",
+            
+            -- 额外元数据
+            playerCharacter = "囧囧（大一新生，漫画爱好者）",
+            mainAntagonist = "小雅（文艺委员，魔法使用者）",
+            loopMechanic = "单人循环（只有玩家记得）",
+            endingCondition = "找出凶手、搜集证据、揭穿阴谋、摧毁循环媒介",
+            themes = {"社交恐惧", "创作理念冲突", "无心伤害的后果", "校园人际关系"},
+            recommended = true  -- 推荐新手从这个故事开始
+        },
+
         -- Story 3: 黑水镇纵火案（美国小镇连环纵火悬疑）
         {
             id = "story_blackwater",

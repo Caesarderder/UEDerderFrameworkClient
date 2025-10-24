@@ -75,6 +75,12 @@ function uiLayerSystem:openUI(uiName, layer, params)
         return nil 
     end
     
+    -- 传递初始化参数（如果有）
+    if params then
+        widget.InitParams = params
+        print("[UILayerSystem] ✓ 已传递初始化参数到Widget")
+    end
+    
     -- 添加到视口，使用layer作为ZOrder控制层级（对应C++的AddToViewport()）
     -- ZOrder: 数值越大显示越靠前
     widget:AddToViewport(layer)

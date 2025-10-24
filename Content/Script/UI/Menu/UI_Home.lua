@@ -398,40 +398,107 @@ function M:UpdateStoryInfo(storyId)
     
     print("[UI_Home] ✓ 配置加载成功")
     
-    -- 4. 提取故事背景文本
-    local storyBackground = nil
-    if storyConfig.display and storyConfig.display.storyBackground then
-        storyBackground = storyConfig.display.storyBackground
-        print("[UI_Home] ✓ 找到故事背景文本")
+    -- 4. 提取故事配置的display字段
+    local displayData = nil
+    if storyConfig.display then
+        displayData = storyConfig.display
+        print("[UI_Home] ✓ 找到故事配置display数据")
     else
-        print("[UI_Home] ⚠️ 警告：配置中未找到 display.storyBackground")
+        print("[UI_Home] ⚠️ 警告：配置中未找到 display 字段")
     end
     
     -- 5. 更新UI显示
-    self:DisplayStoryInfo(storyConfig, storyBackground)
+    self:DisplayStoryInfo(displayData)
 end
 
 ---显示故事信息到UI组件
----@param storyConfig table 故事配置数据
----@param storyBackground string|nil 故事背景文本
-function M:DisplayStoryInfo(storyConfig, storyBackground)
-    -- 显示故事背景文本
-    if self.Text_StoryProfile and storyBackground then
-        self.Text_StoryProfile:SetText(storyBackground)
-        print("[UI_Home] ✓ 已更新 Text_StoryProfile")
-    elseif self.Text_StoryProfile then
-        -- 如果没有背景文本，显示默认提示
-        self.Text_StoryProfile:SetText("暂无故事简介")
-        print("[UI_Home] ⚠️ Text_StoryProfile 存在，但没有故事背景文本")
-    else
+---@param displayData table|nil 故事配置的display数据
+function M:DisplayStoryInfo(displayData)
+    if not self.Text_StoryProfile then
         print("[UI_Home] ⚠️ 警告：Text_StoryProfile 组件不存在")
+        return
     end
     
-    -- TODO: 未来可以在这里添加更多UI更新
-    -- 例如：更新标题、图片等
-    -- if self.Text_StoryTitle and storyConfig.display and storyConfig.display.title then
-    --     self.Text_StoryTitle:SetText(storyConfig.display.title)
-    -- end
+    if not displayData then
+        self.Text_StoryProfile:SetText("暂无故事简介")
+        print("[UI_Home] ⚠️ displayData 为空，显示默认文本")
+        return
+    end
+    
+    -- 构建完整的故事信息文本
+    local fullText = self:BuildStoryInfoText(displayData)
+    
+    -- 更新UI显示
+    self.Text_StoryProfile:SetText(fullText)
+    print("[UI_Home] ✓ 已更新 Text_StoryProfile（包含完整故事配置）")
+end
+
+---构建完整的故事信息文本
+---@param displayData table 故事配置的display数据
+---@return string 格式化后的完整文本
+function M:BuildStoryInfoText(displayData)
+    local sections = {}
+    
+    -- 1. 故事背景
+    if displayData.storyBackground then
+        table.insert(sections, displayData.storyBackground)
+    end
+    
+    -- 2. 玩家设定
+    if displayData.playerSetting then
+        table.insert(sections, "\n" .. displayData.playerSetting)
+    end
+    
+    -- 3. 角色设定
+    if displayData.characters and #displayData.characters > 0 then
+        table.insert(sections, "\n【主要角色】")
+        for i, character in ipairs(displayData.characters) do
+            local charInfo = string.format(
+                "\n%d. %s（%s）\n外貌：%s\n初见印象：%s",
+                i,
+                character.name or "未知",
+                character.title or "未知",
+                character.appearance or "未知",
+                character.firstImpression or "未知"
+            )
+            table.insert(sections, charInfo)
+        end
+    end
+    
+    -- 4. 场景设定
+    if displayData.locations and #displayData.locations > 0 then
+        table.insert(sections, "\n\n【主要场景】")
+        for i, location in ipairs(displayData.locations) do
+            local locInfo = string.format(
+                "\n%d. %s\n描述：%s\n氛围：%s\n活动：%s",
+                i,
+                location.name or "未知",
+                location.description or "未知",
+                location.atmosphere or "未知",
+                location.activities or "未知"
+            )
+            table.insert(sections, locInfo)
+        end
+    end
+    
+    -- 5. 初始线索
+    if displayData.initialClues and #displayData.initialClues > 0 then
+        table.insert(sections, "\n\n【初始线索】")
+        for i, clue in ipairs(displayData.initialClues) do
+            table.insert(sections, string.format("\n· %s", clue))
+        end
+    end
+    
+    -- 6. 开局提示
+    if displayData.openingHints and #displayData.openingHints > 0 then
+        table.insert(sections, "\n\n【探索提示】")
+        for i, hint in ipairs(displayData.openingHints) do
+            table.insert(sections, string.format("\n· %s", hint))
+        end
+    end
+    
+    -- 合并所有部分
+    return table.concat(sections, "")
 end
 
 -- ==================== 公开接口 ====================

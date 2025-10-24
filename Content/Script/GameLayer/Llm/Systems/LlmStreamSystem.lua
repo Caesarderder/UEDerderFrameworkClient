@@ -11,6 +11,14 @@ function LlmStreamSystem:init()
     self.buffer = ""  -- 缓冲区，用于处理不完整的chunk
     self.toolCallsBuffer = {}  -- 工具调用缓冲区
     self.isToolCalling = false  -- 是否正在进行工具调用
+    
+    -- 🔥 流式超时检测相关
+    self.isStreaming = false  -- 是否正在流式接收
+    self.lastReceiveTime = 0  -- 最后一次接收数据的时间
+    self.streamTimeoutSeconds = 5  -- 超时时间（秒）
+    self.streamOnComplete = nil  -- 流式完成回调
+    self.streamFullText = ""  -- 累积的完整文本
+    
     print("[LlmStreamSystem] 流式处理系统初始化完成")
 end
 
@@ -21,6 +29,9 @@ end
 ---@param onComplete function 完成回调 function()
 ---@param onToolCall function|nil 工具调用回调 function(toolCalls: table)
 function LlmStreamSystem:ParseSSEStream(chunk, provider, onDelta, onComplete, onToolCall)
+    -- 🔥 更新接收时间
+    self:UpdateReceiveTime()
+    
     -- 将chunk添加到缓冲区
     self.buffer = self.buffer .. chunk
     
@@ -47,6 +58,7 @@ function LlmStreamSystem:ParseSSEStream(chunk, provider, onDelta, onComplete, on
             
             -- 检查结束标记
             if data == "[DONE]" then
+                self:StopStreaming("正常完成[DONE]")
                 if onComplete then
                     onComplete()
                 end
@@ -75,6 +87,7 @@ function LlmStreamSystem:ParseSSEStream(chunk, provider, onDelta, onComplete, on
                         onToolCall(self.toolCallsBuffer)
                     end
                     
+                    self:StopStreaming("正常完成finish_reason")
                     if onComplete then
                         onComplete()
                     end
@@ -93,6 +106,9 @@ end
 ---@param onDelta function 增量回调
 ---@param onComplete function 完成回调
 function LlmStreamSystem:ParseStreamJSON(chunk, provider, onDelta, onComplete)
+    -- 🔥 更新接收时间
+    self:UpdateReceiveTime()
+    
     -- 将chunk添加到缓冲区
     self.buffer = self.buffer .. chunk
     
@@ -128,6 +144,7 @@ function LlmStreamSystem:ParseStreamJSON(chunk, provider, onDelta, onComplete)
                 local hasFinishReason = parsed.finish_reason and type(parsed.finish_reason) == "string" and parsed.finish_reason ~= ""
                 
                 if isDone or hasFinishReason then
+                    self:StopStreaming("正常完成done/finish")
                     if onComplete then
                         onComplete()
                     end
@@ -188,16 +205,40 @@ function LlmStreamSystem:AccumulateToolCalls(toolCalls)
                 self.toolCallsBuffer[index]["function"].name = tostring(func.name)
             end
             if func.arguments and func.arguments ~= "" then
-                -- 确保都是字符串类型再连接
-                local existingArgs = tostring(self.toolCallsBuffer[index]["function"].arguments or "")
-                local newArgs = tostring(func.arguments)
-                self.toolCallsBuffer[index]["function"].arguments = existingArgs .. newArgs
+                -- 🔥 安全地处理 arguments，避免 userdata 混入
+                local newArgs = ""
+                
+                if type(func.arguments) == "string" then
+                    -- 如果是字符串，直接使用
+                    newArgs = func.arguments
+                elseif type(func.arguments) == "table" then
+                    -- 如果是table，尝试序列化
+                    local json = require("json")
+                    local success, jsonStr = pcall(json.encode, func.arguments)
+                    if success then
+                        newArgs = jsonStr
+                    else
+                        print(string.format("[LlmStreamSystem] ⚠️ 警告：table序列化失败"))
+                        newArgs = ""
+                    end
+                else
+                    -- 其他类型（包括userdata）直接跳过，不要使用tostring
+                    print(string.format("[LlmStreamSystem] ⚠️ 警告：跳过非字符串arguments，类型: %s", type(func.arguments)))
+                    newArgs = ""
+                end
+                
+                if newArgs ~= "" then
+                    local existingArgs = self.toolCallsBuffer[index]["function"].arguments or ""
+                    self.toolCallsBuffer[index]["function"].arguments = existingArgs .. newArgs
+                end
             end
         end
         
         -- 安全的日志输出
         local funcName = tostring(self.toolCallsBuffer[index]["function"].name or "")
-        local funcArgs = tostring(self.toolCallsBuffer[index]["function"].arguments or "")
+        local funcArgsRaw = self.toolCallsBuffer[index]["function"].arguments or ""
+        -- 🔥 确保funcArgs是字符串类型，避免显示userdata
+        local funcArgs = type(funcArgsRaw) == "string" and funcArgsRaw or ""
         print(string.format("[LlmStreamSystem] 累积工具调用 #%d: %s, 参数长度: %d", 
             index, 
             funcName,
@@ -215,6 +256,56 @@ end
 function LlmStreamSystem:ResetToolCallsBuffer()
     self.toolCallsBuffer = {}
     self.isToolCalling = false
+end
+
+---开始流式接收（设置超时检测）
+---@param onComplete function 完成回调
+function LlmStreamSystem:StartStreaming(onComplete)
+    self.isStreaming = true
+    self.lastReceiveTime = os.clock()  -- 记录开始时间
+    self.streamOnComplete = onComplete
+    self.streamFullText = ""
+    print("[LlmStreamSystem] 🔄 开始流式接收，启动超时检测")
+end
+
+---更新最后接收时间（每次收到数据时调用）
+function LlmStreamSystem:UpdateReceiveTime()
+    self.lastReceiveTime = os.clock()
+end
+
+---停止流式接收
+---@param reason string 停止原因
+function LlmStreamSystem:StopStreaming(reason)
+    if not self.isStreaming then
+        return
+    end
+    
+    print(string.format("[LlmStreamSystem] ⏹️ 停止流式接收，原因: %s", reason))
+    self.isStreaming = false
+    
+    -- 触发完成回调
+    if self.streamOnComplete then
+        local callback = self.streamOnComplete
+        self.streamOnComplete = nil  -- 清空回调，避免重复调用
+        callback(true, self.streamFullText)
+    end
+end
+
+---Tick函数，检测流式超时
+---@param deltaTime number 帧间隔时间
+function LlmStreamSystem:Tick(deltaTime)
+    if not self.isStreaming then
+        return
+    end
+    
+    -- 检查是否超时
+    local currentTime = os.clock()
+    local elapsedTime = currentTime - self.lastReceiveTime
+    
+    if elapsedTime > self.streamTimeoutSeconds then
+        print(string.format("[LlmStreamSystem] ⏰ 流式接收超时！已 %.1f 秒无响应", elapsedTime))
+        self:StopStreaming("超时无响应")
+    end
 end
 
 return LlmStreamSystem

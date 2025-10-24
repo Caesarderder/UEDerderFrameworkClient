@@ -1037,17 +1037,24 @@ end
 function M:BuildSceneChoiceTypeOptions(choiceName, choiceDescription)
     local BM_StoryConfig = require("DataLayer.Story.BM_StoryConfig")
     local BM_StoryRuntime = require("DataLayer.Story.BM_StoryRuntime")
+    local LlmPromptConfig = require("Config.LlmPromptConfig")
     
     -- 获取当前场景信息
     local currentSceneId = BM_StoryRuntime:GetCurrentSceneId()
     local sceneInfo = BM_StoryConfig:GetScene(currentSceneId)
+    
+    -- 获取循环次数
+    local loopCount = BM_StoryRuntime:GetLoopCount()
+    
+    -- 🎮 根据循环次数获取动态策略
+    local loopStrategy = LlmPromptConfig.GetLoopStrategy(loopCount)
     
     -- 构建参数
     local typeOptions = {
         -- 基础信息
         choiceName = choiceName,
         choiceDescription = choiceDescription or choiceName,
-        loopCount = BM_StoryRuntime:GetLoopCount(),
+        loopCount = loopCount,
         
         -- 场景详情
         currentSceneName = sceneInfo and sceneInfo.name or currentSceneId,
@@ -1059,6 +1066,9 @@ function M:BuildSceneChoiceTypeOptions(choiceName, choiceDescription)
         
         -- 循环历史（简化）
         loopHistory = self:GetLoopHistorySummary(),
+        
+        -- 🎮 循环策略（根据循环次数动态调整）
+        loopStrategy = loopStrategy,
         
         -- 场景NPC
         sceneNPCs = self:GetSceneNPCsSummary(currentSceneId),
